@@ -1,0 +1,21 @@
+/* ---------------------------------
+=page title
+--------------------------------- */
+
+.c-pagetitle {
+  font-weight: 500;
+  font-size: clamp(48 / 16 * 1rem, 1rem + 6vw, 102 / 16 * 1rem);
+  line-height: 1.14;
+  max-width: 24ex;
+  margin-block-end: 0.5em;
+  color: var(--color-text-invert);
+  text-wrap: balance;
+
+  @media (width >= 1024px) {
+    line-height: 1.02;
+  }
+}
+
+.c-pagetitle > span {
+  color: var(--color-brand-bright);
+}

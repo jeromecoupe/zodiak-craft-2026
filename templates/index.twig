@@ -1,14 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>Welcome to Craft CMS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
-    <h1>Projects</h1>
+{# template to extend (replace any block by block defined in this file) #}
+{% extends "_layouts/base.twig" %}
 
-    {#  
+{# content of the page > goes in content block of extended template (base.twig) #}
+{% block content %}
+  <div class="c-pagesection  c-pagesection--brand">
+    <div class="l-container">
+      <h1 class="c-pagetitle">We don't work <span>for</span> clients, we work <span>with</span> them.</h1>
+      <div class="c-homeintro">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, soluta? Iusto culpa debitis id, accusamus nesciunt dolorem sapiente natus similique repudiandae corrupti fuga magnam beatae at, quibusdam aperiam architecto soluta.</p>
+        <p><a class="c-ctalink  c-ctalink--invert" href="/projects/">
+          Our projects 
+          {{ include("_svg/arrow.svg") }}
+        </a></p>
+      </div>
+    </div>
+  </div>
+  <div class="c-banner">
+    <img src="/dist/img/banner_home_800.jpg"
+          srcset="/dist/img/banner_home_800.jpg 800w,
+                  /dist/img/banner_home_1024.jpg 1024w,
+                  /dist/img/banner_home_1500.jpg 1500w,"
+          sizes="100vw"
+          loading="lazy"
+          decoding="async"
+          width="1500"
+          height="844"
+          alt="people in the office">
+  </div>
+  <div class="c-pagesection">
+    <div class="l-container">
+
+        <div class="l-split">
+          <h2 class="c-smalltitle">What we do</h2>
+          <div>
+
+            <p class="c-intro">You know your business and clients, we know a thing or two about the web. Let's do this together!</p>
+
+            <ul class="c-vlist  c-vlist--m">
+              <li>
+                <article class="c-service">
+                  <h3 class="c-service__title">Discovery and planning</h3>
+                  <p class="c-service__text">Lorem <a href="fake.html">ipsum dolor sit amet</a> consectetur adipisicing elit. Voluptatem labore ut, quas nemo ad fuga rerum iusto, quidem veritatis deserunt quos perferendis consequatur doloribus reprehenderit magni cumque omnis! Modi, quam.</p>
+                </article>
+              </li>
+              <li>
+                <article class="c-service">
+                  <h3 class="c-service__title">Design and prototypes</h3>
+                  <p class="c-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem labore ut, quas nemo ad fuga rerum iusto, quidem veritatis deserunt quos perferendis consequatur doloribus reprehenderit magni cumque omnis! Modi, quam.</p>
+                </article>
+              </li>
+              <li>
+                <article class="c-service">
+                  <h3 class="c-service__title">Code and interactivity</h3>
+                  <p class="c-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem labore ut, quas nemo ad fuga rerum iusto, quidem veritatis deserunt quos perferendis consequatur doloribus reprehenderit magni cumque omnis! Modi, quam.</p>
+                </article>
+              </li>
+              <li>
+                <article class="c-service">
+                  <h3 class="c-service__title">Ongoing support</h3>
+                  <p class="c-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem labore ut, quas nemo ad fuga rerum iusto, quidem veritatis deserunt quos perferendis consequatur doloribus reprehenderit magni cumque omnis! Modi, quam.</p>
+                </article>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+    </div>
+  </div>
+  <div class="c-pagesection">
+    <div class="l-container">
+
+      <div class="l-split">
+        <h2 class="c-smalltitle">Latest projects</h2>
+        <div>
+          <p class="c-intro">A small selection of projects we have been working on lately.</p>
+        </div>
+      </div>
+
+      {#  
         - element query: craft, choppe moi les elements de type entries 
             - qui sont dans la section projets
         - exécution de la query
@@ -17,30 +87,56 @@
             - ".count()" renvoie le nomre d'entries trouvées
             - ".ids()" renvoie un tableau des ids numérique des entries dans la DB de craft
             - ".exists()" renvoie true ou false
-    #}
-    {% set allProjects = craft.entries()
-        .section("projects")
-        .all() %}
+      #}
+      {% set allProjects = craft.entries()
+          .section("projects")
+          .all() %}
 
-    {% for item in allProjects %}
-        {% if loop.first %}<ul>{% endif %}
-        
-        {% set img = item.projectImage.one() %}
+      {% for item in allProjects %}
+          {% if loop.first %}<ul class="l-grid  l-grid--2cols@small  l-grid--4cols@large  u-mbe-xl">{% endif %}
 
-        <li>
-            <div class="projectcard">
-                <div class="projectcard-media">
-                    <img src="{{ img.getUrl({ width: 600, height: 600 }) }}" alt="{{ img.title }}">
-                </div>
-                <div class="projectcard-text">
-                    <h2 class="projectcard-title"><a href="{{ item.url }}">{{ item.title }}</a></h2>
-                    <p class="projectcard-subtitle">{{ item.projectSubtitle }}</p>
-                </div>
-            </div>
-        </li>
+          {# 
+            projectImage is an assets fields
+            - relatinal fields (assets, entries, users) always retur n an array of objects
+              - each key of these objects corresponds to the handle of a field defined in the field layout / entry type
+            - we use the `one()` method to only return the first (and only in this case) related item / asset
+          #}
+          {% set img = item.projectImage.one() %}
 
-        {% if loop.last %}</ul>{% endif %}
+          <li>
+              <article class="c-projectcard">
+                <a class="c-projectcard__link" href="{{ item.url }}/">
+                  <div class="c-projectcard__media">
+                    {% if img %}
+                      <img src="{{ img.getUrl({ width: 450, height: 600 }) }}"
+                           srcset="{{ img.getUrl({ width: 450, height: 600 }) }} 450w,
+                                    {{ img.getUrl({ width: 600, height: 800 }) }} 600w"
+                           sizes="(min-width: 1500px) 345px,
+                                  (min-width: 1024px) 25vw
+                                  (min-width: 500px) 50vw,
+                                  100vw"
+                           class="o-fluidimg"
+                           width="600"
+                           height="800"
+                           alt="">
+                    {% endif %}
+                  </div>
+                  <div class="c-projectcard__body">
+                    <h3 class="c-projectcard__title">{{ item.title }}</h3>
+                    <p class="c-projectcard__tagline">{{ item.projectSubtitle }}</p>
+                  </div>
+                </a>
+              </article>
+          </li>
 
-    {% endfor %}
-</body>
-</html>
+          {% if loop.last %}</ul>{% endif %}
+
+      {% endfor %}
+
+      <p><a class="c-ctalink" href="/projects/">
+        More projects 
+        {{ include("_svg/arrow.svg") }}
+      </a></p>
+    </div>
+  </div>
+{% endblock %}

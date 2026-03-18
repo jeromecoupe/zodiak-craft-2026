@@ -1,0 +1,38 @@
+{
+  "name": "zodiak-craft-2026",
+  "version": "1.0.0",
+  "description": "A fake agency website to learn Craft CMS",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf \"./web/dist\"",
+    "styles:dev": "lightningcss --bundle \"./src/css/main.css\" -o \"./web/dist/css/main.css\"",
+    "styles:prod": "lightningcss --bundle --minify --browserslist \"./src/css/main.css\" -o \"./web/dist/css/main.css\"",
+    "scripts:dev": "esbuild \"./src/js/main.js\" --bundle --outfile=\"./web/dist/js/main-bundle.js\"",
+    "scripts:prod": "esbuild \"./src/js/main.js\" --bundle --minify --outfile=\"./web/dist/js/main-bundle.js\"",
+    "watch:styles": "onchange \"./src/css/**/*\" -- npm run styles:dev",
+    "watch:scripts": "onchange \"./src/js/**/*\" -- npm run scripts:dev",
+    "copy:fonts": "cpy \"./src/fonts/**/*\" \"./web/dist/fonts/\"",
+    "copy:img": "cpy \"./src/img/**/*\" \"./web/dist/img/\"",
+    "copy": "npm-run-all --parallel copy:*",
+    "build": "npm-run-all clean --parallel copy:* scripts:prod styles:prod",
+    "dev": "npm-run-all --parallel watch:*"
+  },
+  "browserslist": "> 0.5% and not dead",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeromecoupe/zodiak-craft-2026.git"
+  },
+  "keywords": [],
+  "author": "Jérôme and Nox",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://github.com/jeromecoupe/zodiak-craft-2026#readme",
+  "devDependencies": {
+    "cpy-cli": "^7.0.0",
+    "esbuild": "^0.27.4",
+    "lightningcss-cli": "^1.32.0",
+    "npm-run-all2": "^8.0.4",
+    "onchange": "^7.1.0",
+    "rimraf": "^6.1.3"
+  }
+}

@@ -1,0 +1,19 @@
+/* ---------------------------------
+=links
+--------------------------------- */
+
+a {
+  --link-color: var(--color-brand);
+  --link-underline-color: hsl(from var(--color-brand) h s l / 0.3);
+
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 0.36ex;
+  text-decoration-color: var(--link-underline-color);
+}
+
+a:hover,
+a:focus-visible {
+  --link-color: var(--color-brand-dark);
+  --link-underline-color: var(--color-brand-dark);
+}

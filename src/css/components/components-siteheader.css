@@ -1,0 +1,52 @@
+/* ---------------------------------
+=siteheader
+--------------------------------- */
+
+.c-siteheader {
+  --siteheader-padding: calc(18 / 16 * 1rem);
+
+  background-color: var(--color-brand);
+  color: var(--color-text-invert);
+  border-block-end: 1px solid rgba(255, 255, 255, 0.18);
+
+  padding-block: var(--siteheader-padding);
+
+  @media (width >= 760px) {
+    --siteheader-padding: calc(24 / 16 * 1rem);
+  }
+
+  @media (width >= 1024px) {
+    --siteheader-padding: calc(30 / 16 * 1rem);
+  }
+
+  @media (width >= 1440px) {
+    --siteheader-padding: calc(42 / 16 * 1rem);
+  }
+}
+
+.c-siteheader__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.c-siteheader__logo {
+  margin: 0 auto 0 0;
+}
+
+.c-siteheader__menunav {
+  margin: 0;
+
+  @media (width >= 760px) {
+    display: none;
+  }
+}
+
+.c-siteheader__mainnav {
+  display: none;
+
+  @media (width >= 760px) {
+    display: block;
+  }
+}

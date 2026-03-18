@@ -1,0 +1,13 @@
+/* ---------------------------------
+=content modules case studies
+--------------------------------- */
+
+.c-casemodule + .c-casemodule {
+  --casemodule-margin-start: calc(42 / 16 * 1rem);
+
+  margin-block-start: var(--casemodule-margin-start);
+
+  @media (width >= 1024px) {
+    --casemodule-margin-start: calc(60 / 16 * 1rem);
+  }
+}

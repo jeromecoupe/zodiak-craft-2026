@@ -1,0 +1,19 @@
+/* ---------------------------------
+=splits
+--------------------------------- */
+
+.l-split {
+  --split-gutter: 18px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+
+  @media (width >= 760px) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    column-gap: var(--split-gutter);
+  }
+
+  @media (width >= 1440px) {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  }
+}

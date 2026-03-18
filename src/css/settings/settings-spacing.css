@@ -1,0 +1,10 @@
+:root {
+  --spacing-none: 0;
+  --spacing-2xs: calc(3 / 16 * 1rem);
+  --spacing-xs: calc(6 / 16 * 1rem);
+  --spacing-sm: calc(12 / 16 * 1rem);
+  --spacing-md: calc(18 / 16 * 1rem);
+  --spacing-lg: calc(24 / 16 * 1rem);
+  --spacing-xl: calc(30 / 16 * 1rem);
+  --spacing-2xl: calc(42 / 16 * 1rem);
+}

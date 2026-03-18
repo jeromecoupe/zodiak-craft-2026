@@ -1,0 +1,16 @@
+/* ---------------------------------
+=logo
+--------------------------------- */
+
+.c-logo {
+  display: block;
+  width: 108px;
+
+  @media (width >= 760px) {
+    width: 120px;
+  }
+
+  @media (width >= 1024px) {
+    width: 150px;
+  }
+}

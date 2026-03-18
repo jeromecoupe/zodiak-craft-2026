@@ -1,0 +1,9 @@
+/* ---------------------------------
+=home introduction
+--------------------------------- */
+
+.c-homeintro {
+  --homeintro-margin: 0;
+
+  max-inline-size: 72ex;
+}

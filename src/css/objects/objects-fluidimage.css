@@ -1,0 +1,14 @@
+/* ---------------------------------
+=fluid images
+--------------------------------- */
+
+.o-fluidimg {
+  display: block;
+  max-inline-size: 100%;
+  height: auto;
+  background-color: var(--color-gray6);
+}
+
+.o-fluidimg--full {
+  inline-size: 100%;
+}

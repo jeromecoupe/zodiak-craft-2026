@@ -1,0 +1,29 @@
+/* ---------------------------------
+=banner
+--------------------------------- */
+
+.c-banner {
+  --banner-size: 240px;
+
+  inline-size: 100%;
+  block-size: var(--banner-size);
+  background-color: var(--color-gray6);
+
+  @media (width >= 760px) {
+    --banner-size: 360px;
+  }
+
+  @media (width >= 1024px) {
+    --banner-size: 420px;
+  }
+
+  @media (width >= 1440px) {
+    --banner-size: 600px;
+  }
+}
+
+.c-banner > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,4 +1,4 @@
-dateModified: 1773245184
+dateModified: 1773843882
 elementSources:
   craft\elements\Entry:
     -
@@ -56,7 +56,7 @@ meta:
     c87d9797-08cc-4928-a9c8-363e490a8db0: Projects # Projects
     f430b339-9348-455d-80ab-66ab0d1a0285: zodiak # zodiak
 system:
-  edition: solo
+  edition: pro
   live: true
   name: zodiak
   schemaVersion: 5.9.0.8

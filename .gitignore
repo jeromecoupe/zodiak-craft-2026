@@ -1,4 +1,15 @@
-/.env
+# Editors files
 /.idea
-/vendor
+
+# Mac files
 .DS_Store
+
+# Craft files
+/vendor
+/.env
+
+# Node files
+/node_modules
+
+# dist files
+/web/dist

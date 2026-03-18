@@ -1,0 +1,25 @@
+/* ---------------------------------
+=body
+--------------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  font-size: 1rem;
+  background-color: var(--color-background);
+  color: var(--color-text);
+
+  @media (width >= 760px) {
+    font-size: calc(18 / 16 * 1rem);
+  }
+}
+
+body.has-menu {
+  overflow-y: hidden;
+
+  @media (width >= 760px) {
+    overflow-y: auto;
+  }
+}

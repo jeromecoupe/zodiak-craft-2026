@@ -1,0 +1,103 @@
+/* ---------------------------------
+=grid
+--------------------------------- */
+
+/* ---------------------------------
+=base classes
+--------------------------------- */
+
+.l-grid {
+  --grid-gutter: 18px;
+  --grid-columns: 1;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  gap: var(--grid-gutter);
+}
+
+.l-grid--2cols {
+  --grid-columns: 2;
+}
+
+.l-grid--3cols {
+  --grid-columns: 3;
+}
+
+.l-grid--4cols {
+  --grid-columns: 4;
+}
+
+.l-grid--auto {
+  --grid-min-colsize: 280px;
+
+  grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--grid-min-colsize), 100%), 1fr)
+    );
+}
+
+/* ---------------------------------
+=responsive classes
+--------------------------------- */
+
+/* small */
+@media (width >= 500px) {
+  .l-grid--2cols\@small {
+    --grid-columns: 2;
+  }
+
+  .l-grid--3cols\@small {
+    --grid-columns: 3;
+  }
+
+  .l-grid--4cols\@small {
+    --grid-columns: 4;
+  }
+}
+
+/* medium */
+@media (width >= 750px) {
+  .l-grid--2cols\@medium {
+    --grid-columns: 2;
+  }
+
+  .l-grid--3cols\@medium {
+    --grid-columns: 3;
+  }
+
+  .l-grid--4cols\@medium {
+    --grid-columns: 4;
+  }
+}
+
+@media (width >= 1024px) {
+  .l-grid--2cols\@large {
+    --grid-columns: 2;
+  }
+
+  .l-grid--3cols\@large {
+    --grid-columns: 3;
+  }
+
+  .l-grid--4cols\@large {
+    --grid-columns: 4;
+  }
+}
+
+@media (width >= 1440px) {
+  .l-grid--2cols\@xlarge {
+    --grid-columns: 2;
+  }
+
+  .l-grid--3cols\@xlarge {
+    --grid-columns: 3;
+  }
+
+  .l-grid--4cols\@xlarge {
+    --grid-columns: 4;
+  }
+}

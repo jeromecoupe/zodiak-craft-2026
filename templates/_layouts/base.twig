@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zodiak Agency - Home</title>
+  <meta name="description" content="Your friendly web agency">
+
+  <link rel="preload" href="/dist/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/dist/fonts/inter-variable-italic.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <meta property="og:url" content="">
+  <meta property="og:title" content="Home">
+  <meta property="og:description" content="Your friendly web agency">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="">
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@iadarts">
+  <meta name="twitter:title" content="Home">
+  <meta name="twitter:description" content="Your friendly web agency">
+  <meta name="twitter:image" content="">
+
+  <link rel="stylesheet" href="/dist/css/main.css">
+  <script type="module" src="/dist/js/main-bundle.js"></script>
+</head>
+<body>
+  
+  {{ include("_includes/siteheader.twig") }}
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  {{ include("_includes/sitefooter.twig") }}
+  
+</body>
+</html>

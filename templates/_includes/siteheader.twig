@@ -1,0 +1,23 @@
+<header class="c-siteheader">
+  <div class="l-container">
+
+    <div class="c-siteheader__content">
+      <p class="c-siteheader__logo"><a href="/">
+        <img src="/dist/img/logo.svg"
+             decoding="async"
+             width="150"
+             height="31"
+             class="c-logo"
+             alt="Zodiak Agency">
+      </a></p>
+      <div class="c-siteheader__mainnav">
+        {{ include("_includes/mainnav.twig") }}
+      </div>
+      <p class="c-siteheader__menunav"><a class="c-menulink  js-menutrigger" href="#footernav">Menu</a></p>
+    </div>
+
+  </div>
+
+  {{ include("_includes/mobilemenu.twig") }}
+
+</header>

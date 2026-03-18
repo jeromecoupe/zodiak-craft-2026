@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Welcome to Craft CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <h1>Projects</h1>
+
+    {#  
+        - element query: craft, choppe moi les elements de type entries 
+            - qui sont dans la section projets
+        - exécution de la query
+            - ".one()" renvoie un objet avec comme keys les handle des champs (assignés à l'entry dans le entry type)
+            - ".all()" renvoie un tableau d'objets avec comme key les handle des champs
+            - ".count()" renvoie le nomre d'entries trouvées
+            - ".ids()" renvoie un tableau des ids numérique des entries dans la DB de craft
+            - ".exists()" renvoie true ou false
+    #}
+    {% set allProjects = craft.entries()
+        .section("projects")
+        .all() %}
+
+    {% for item in allProjects %}
+        {% if loop.first %}<ul>{% endif %}
+        
+        {% set img = item.projectImage.one() %}
+
+        <li>
+            <div class="projectcard">
+                <div class="projectcard-media">
+                    <img src="{{ img.getUrl({ width: 600, height: 600 }) }}" alt="{{ img.title }}">
+                </div>
+                <div class="projectcard-text">
+                    <h2 class="projectcard-title"><a href="{{ item.url }}">{{ item.title }}</a></h2>
+                    <p class="projectcard-subtitle">{{ item.projectSubtitle }}</p>
+                </div>
+            </div>
+        </li>
+
+        {% if loop.last %}</ul>{% endif %}
+
+    {% endfor %}
+</body>
+</html>
