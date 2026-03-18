@@ -1,0 +1,36 @@
+columnSuffix: null
+handle: projectImage
+instructions: 'Image must be 1500x1125 in portrait and JPG. The system will create optimised images based on that one.'
+name: Image
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: false
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultPlacement: end
+  defaultUploadLocationSource: 'volume:65166879-68f5-4a7f-a618-d9c979404621' # Project Images
+  defaultUploadLocationSubpath: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: true
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:65166879-68f5-4a7f-a618-d9c979404621' # Project Images
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add image'
+  showSearchInput: false
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: thumbs
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: c87d9797-08cc-4928-a9c8-363e490a8db0 # Projects
+handle: projects
+maxAuthors: 1
+name: Projects
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  f430b339-9348-455d-80ab-66ab0d1a0285: # zodiak
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages/projects-entry.twig
+    uriFormat: 'projects/{slug}'
+type: channel

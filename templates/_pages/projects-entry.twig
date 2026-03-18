@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {#
+        - Craft fait du routing (une de ses fonctions principales)
+            - Il r egarde la structure de l'URL quand ce template est chargé
+            - Il sait que c'est une URL de détail d'entry (on lui a dit quand on a créé la section)
+            - Comme il est gentil, il nous créée automatiquement une variable 'entry' qui est ... un gros objet
+                - Cet objet entry à comme keys les handle des champs.
+                - Youpieee !
+    #}
+
+
+    <img src="" alt="">
+    <h1>{{ entry.title }}</h1>
+    <p>{{ entry.projectSubtitle }}</p>
+
+</body>
+</html>

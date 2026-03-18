@@ -1,0 +1,9 @@
+baseUrl: $PRIMARY_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: en
+name: zodiak
+primary: true
+siteGroup: 11eb6c53-5e08-483a-aa33-ef3e5dfc2456 # zodiak
+sortOrder: 1

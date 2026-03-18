@@ -1,0 +1,70 @@
+dateModified: 1773245184
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: true
+      key: '*'
+      page: Entries
+      tableAttributes:
+        - status
+        - section
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      heading: Channels
+      key: 'heading:058c676f-688f-4016-b3f3-1a2457d9645c'
+      page: Entries
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: table
+      disabled: false
+      key: 'section:c3d44bc9-cd36-4f01-a8b9-780009eeac96' # Projects
+      page: Entries
+      tableAttributes:
+        - status
+        - postDate
+      type: native
+email:
+  fromEmail: kerya.nguyen@etu.iad-arts.be
+  fromName: zodiak
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  projectsImages:
+    hasUrls: true
+    name: 'Projects Images'
+    settings:
+      path: '@assetsBasePath/projects_images'
+    type: craft\fs\Local
+    url: '@assetsBaseUrl/projects_images'
+meta:
+  __names__:
+    11eb6c53-5e08-483a-aa33-ef3e5dfc2456: zodiak # zodiak
+    85054f16-a647-4e4d-acc2-85259bedbdcf: Image # Image
+    65166879-68f5-4a7f-a618-d9c979404621: 'Project Images' # Project Images
+    bb20e26f-e0ca-46d3-96d3-db26f1306a8d: Subtitle # Subtitle
+    bd941b2b-afd7-417c-a8f0-7c9a2c47bc56: 'Public Schema' # Public Schema
+    c3d44bc9-cd36-4f01-a8b9-780009eeac96: Projects # Projects
+    c87d9797-08cc-4928-a9c8-363e490a8db0: Projects # Projects
+    f430b339-9348-455d-80ab-66ab0d1a0285: zodiak # zodiak
+system:
+  edition: solo
+  live: true
+  name: zodiak
+  schemaVersion: 5.9.0.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true
