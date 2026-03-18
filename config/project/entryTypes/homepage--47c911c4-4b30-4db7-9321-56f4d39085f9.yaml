@@ -1,0 +1,74 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  f638c670-3393-4f0c-a617-8360b92f1572:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-03-18T16:48:16+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a1917f55-1534-44e6-9159-e330ae97592e # Title
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7da9b93-06ce-4e00-b71d-ec2602df5698
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-03-18T16:48:16+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 2fa12a9c-e0ff-4404-943b-d18c0f0f5f4e # Intro
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 23815871-5ea3-4397-86ce-35adbd4f53ab
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-03-18T17:08:39+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7c39293b-eed9-4ccd-9fef-54ef45046927 # Banner Image
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e8f5a774-0b1e-4d64-8ff0-c0d67c162a4e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5a31bdc4-d2ff-40df-8012-777955c0231f
+        userCondition: null
+    thumbFieldKey: null
+handle: homepage
+hasTitleField: false
+icon: null
+name: homepage
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: Homepage
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: Homepage

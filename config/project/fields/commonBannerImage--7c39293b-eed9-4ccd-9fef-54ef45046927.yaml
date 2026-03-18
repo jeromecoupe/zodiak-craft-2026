@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: projectImage
-instructions: 'Image must be 1500x1125 in landscape and JPG. The system will create optimised images based on that one.'
-name: Image
+handle: commonBannerImage
+instructions: null
+name: 'Banner Image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -20,9 +20,9 @@ settings:
   restrictFiles: true
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:65166879-68f5-4a7f-a618-d9c979404621' # Project Images
+  restrictedLocationSource: 'volume:22cd74bf-020d-4724-aa7e-fab6166f847b' # Pages Banners
   restrictedLocationSubpath: null
-  selectionLabel: 'Add image'
+  selectionLabel: null
   showSearchInput: false
   showSiteMenu: true
   showUnpermittedFiles: false

@@ -3,11 +3,19 @@
 
 {# content of the page > goes in content block of extended template (base.twig) #}
 {% block content %}
+  {#
+    Craft fait du routing (une de ses fonctions principales)
+    - Il regarde la structure de l'URL quand ce template est chargé
+    - Il sait que c'est une URL de détail d'entry (on lui a dit quand on a créé la section)
+    - Comme il est gentil, il nous créée automatiquement une variable 'entry' qui est ... un gros objet
+        - Cet objet entry à comme keys les handle des champs.
+        - Youpieee !
+    #}
   <div class="c-pagesection  c-pagesection--brand">
     <div class="l-container">
-      <h1 class="c-pagetitle">We don't work <span>for</span> clients, we work <span>with</span> them.</h1>
+      <h1 class="c-pagetitle">{{ entry.commonBigtitle }}</h1>
       <div class="c-homeintro">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, soluta? Iusto culpa debitis id, accusamus nesciunt dolorem sapiente natus similique repudiandae corrupti fuga magnam beatae at, quibusdam aperiam architecto soluta.</p>
+        <p>{{ entry.commonIntro }}</p>
         <p><a class="c-ctalink  c-ctalink--invert" href="/projects/">
           Our projects 
           {{ include("_svg/arrow.svg") }}
@@ -16,16 +24,19 @@
     </div>
   </div>
   <div class="c-banner">
-    <img src="/dist/img/banner_home_800.jpg"
-          srcset="/dist/img/banner_home_800.jpg 800w,
-                  /dist/img/banner_home_1024.jpg 1024w,
-                  /dist/img/banner_home_1500.jpg 1500w,"
+    {% set pageBanner = entry.commonBannerImage.one() %}
+    {% if pageBanner %}
+    <img src="{{ pageBanner.geturl({ width: 800, height: 450 }) }}"
+          srcset="{{ pageBanner.geturl({ width: 800, height: 450 }) }} 800w,
+                  {{ pageBanner.geturl({ width: 1024, height: 576  }) }} 1024w,
+                  {{ pageBanner.geturl({ width: 1500, height: 844 }) }} 1500w,"
           sizes="100vw"
           loading="lazy"
           decoding="async"
           width="1500"
           height="844"
-          alt="people in the office">
+          alt="{{ pageBanner.alt }}">
+    {% endif %}
   </div>
   <div class="c-pagesection">
     <div class="l-container">
