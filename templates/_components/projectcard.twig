@@ -1,0 +1,35 @@
+{# 
+projectImage is an assets fields
+- relational fields (assets, entries, users) always return an array of objects
+    - each key of these objects corresponds to the handle of a field defined in the field layout / entry type
+- we use the `one()` method to only return the first (and only in this case) related item / asset
+#}
+{% set url = project.url ?? null %}
+{% set title = project.title ?? null %}
+{% set subtitle = project.projectSubtitle ?? null %}
+{% set img = project.projectImage.one() ?? null %}
+
+
+<article class="c-projectcard">
+    <a class="c-projectcard__link" href="{{ url }}/">
+        <div class="c-projectcard__media">
+        {% if img %}
+            <img src="{{ img.getUrl({ width: 450, height: 600 }) }}"
+                srcset="{{ img.getUrl({ width: 450, height: 600 }) }} 450w,
+                        {{ img.getUrl({ width: 600, height: 800 }) }} 600w"
+                sizes="(min-width: 1500px) 345px,
+                        (min-width: 1024px) 25vw
+                        (min-width: 500px) 50vw,
+                        100vw"
+                class="o-fluidimg"
+                width="600"
+                height="800"
+                alt="">
+        {% endif %}
+        </div>
+        <div class="c-projectcard__body">
+        <h3 class="c-projectcard__title">{{ title }}</h3>
+        <p class="c-projectcard__tagline">{{ subtitle }}</p>
+        </div>
+    </a>
+</article>

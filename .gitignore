@@ -13,3 +13,4 @@
 
 # dist files
 /web/dist
+/web/uploads/*

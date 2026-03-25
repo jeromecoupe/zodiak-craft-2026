@@ -4,8 +4,8 @@
 
 .c-pagination {
   list-style: none;
-  margin: calc(42 / 16 * 1rem) 0 0;
-  padding: calc(30 / 16 * 1rem) 0 0;
+  margin: 42px 0 0;
+  padding: 12px 0;
   border-top: 1px solid var(--color-border-light);
 
   display: flex;
@@ -15,38 +15,8 @@
   gap: calc(8 / 16 * 1rem);
 }
 
-.c-pagination__link {
-  display: inline-block;
-  padding: calc(12 / 16 * 1rem) calc(12 / 16 * 1rem);
-  font-weight: 600;
-  font-size: calc(16 / 16 * 1rem);
-  line-height: 1;
-  text-decoration: none;
-  border: 2px solid var(--color-border-light);
-  background-color: transparent;
-  color: var(--color-text-offset);
-  border-radius: 3px;
-
-  transition: color 0.2s ease-out;
-
-  &:hover,
-  &:active {
-    color: var(--color-text);
-  }
-}
-
-.c-pagination__link.is-active {
-  border-color: var(--color-brand);
-  color: var(--color-text);
-}
-
 .c-pagination__next,
 .c-pagination__previous {
-  display: inline-block;
-  padding-block: calc(12 / 16 * 1rem);
-  font-weight: 600;
-  font-size: calc(16 / 16 * 1rem);
-  line-height: 1;
   text-decoration: none;
   color: var(--color-text-offset);
 
@@ -56,4 +26,8 @@
   &:active {
     color: var(--color-text);
   }
+}
+
+.c-pagination svg {
+  display: block;
 }

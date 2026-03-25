@@ -1,0 +1,58 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  c521703f-50e1-43ef-a1bf-5bcb3d1ec28a:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-03-25T13:47:29+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: be6092aa-f7fe-4a07-90c4-d2684bd98478 # Title
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dead23a0-3ab7-41eb-8369-970e024bc379
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-03-25T13:47:29+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 138f0bd5-183c-480a-acc3-8cc9cb404e25 # Text
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 15577841-4226-4e50-9494-022db6d1cc7d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3af23266-3790-4ad5-acd0-80e3d115bb3b
+        userCondition: null
+    thumbFieldKey: null
+handle: activities
+hasTitleField: false
+icon: null
+name: Activities
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ' {mxActivityTitle}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{mxActivityTitle}'

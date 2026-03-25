@@ -48,3 +48,4 @@
 
 @import "utilities/utilities-text-colors.css" layer(utilities);
 @import "utilities/utilities-spacing.css" layer(utilities);
+@import "utilities/utilities-visually-hidden.css" layer(utilities);

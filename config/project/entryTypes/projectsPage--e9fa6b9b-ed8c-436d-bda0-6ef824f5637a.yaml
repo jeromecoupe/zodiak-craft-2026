@@ -1,0 +1,42 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  0b290ba9-7b5b-4e3e-ab00-26953b2cc6c9:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-03-25T15:36:41+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a1917f55-1534-44e6-9159-e330ae97592e # Title
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 32229dbe-e90c-46ea-8dda-899f36349570
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e0c2534e-09a5-4318-9784-42540520ed29
+        userCondition: null
+    thumbFieldKey: null
+handle: projectsPage
+hasTitleField: false
+icon: null
+name: 'Projects Page'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: 'Projects Page'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: 'Projects Page'

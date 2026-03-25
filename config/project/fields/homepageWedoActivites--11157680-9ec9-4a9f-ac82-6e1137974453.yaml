@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: homepageWedoActivites
+instructions: null
+name: Activites
+searchable: false
+settings:
+  createButtonLabel: 'New Activity'
+  defaultIndexViewMode: cards
+  enableVersioning: true
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 0bc00463-b8d9-457c-94dd-421a357df51a # Activities
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: 6
+  minEntries: 3
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

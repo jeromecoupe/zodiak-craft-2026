@@ -13,7 +13,8 @@
     #}
   <div class="c-pagesection  c-pagesection--brand">
     <div class="l-container">
-      <h1 class="c-pagetitle">{{ entry.commonBigtitle }}</h1>
+      {% set formattedTitle = entry.commonBigtitle|replace({ "{{{": "<span>", "}}}": "</span>" }) %}
+      <h1 class="c-pagetitle">{{ formattedTitle|raw }}</h1>
       <div class="c-homeintro">
         <p>{{ entry.commonIntro }}</p>
         <p><a class="c-ctalink  c-ctalink--invert" href="/projects/">
@@ -42,37 +43,25 @@
     <div class="l-container">
 
         <div class="l-split">
-          <h2 class="c-smalltitle">What we do</h2>
+          <h2 class="c-smalltitle">{{entry.homepageWedoTitle}}</h2>
           <div>
 
-            <p class="c-intro">You know your business and clients, we know a thing or two about the web. Let's do this together!</p>
+            <p class="c-intro">{{entry.homepageWedoIntro}}</p>
 
-            <ul class="c-vlist  c-vlist--m">
-              <li>
-                <article class="c-service">
-                  <h3 class="c-service__title">Discovery and planning</h3>
-                  <p class="c-service__text">Lorem <a href="fake.html">ipsum dolor sit amet</a> consectetur adipisicing elit. Voluptatem labore ut, quas nemo ad fuga rerum iusto, quidem veritatis deserunt quos perferendis consequatur doloribus reprehenderit magni cumque omnis! Modi, quam.</p>
-                </article>
-              </li>
-              <li>
-                <article class="c-service">
-                  <h3 class="c-service__title">Design and prototypes</h3>
-                  <p class="c-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem labore ut, quas nemo ad fuga rerum iusto, quidem veritatis deserunt quos perferendis consequatur doloribus reprehenderit magni cumque omnis! Modi, quam.</p>
-                </article>
-              </li>
-              <li>
-                <article class="c-service">
-                  <h3 class="c-service__title">Code and interactivity</h3>
-                  <p class="c-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem labore ut, quas nemo ad fuga rerum iusto, quidem veritatis deserunt quos perferendis consequatur doloribus reprehenderit magni cumque omnis! Modi, quam.</p>
-                </article>
-              </li>
-              <li>
-                <article class="c-service">
-                  <h3 class="c-service__title">Ongoing support</h3>
-                  <p class="c-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem labore ut, quas nemo ad fuga rerum iusto, quidem veritatis deserunt quos perferendis consequatur doloribus reprehenderit magni cumque omnis! Modi, quam.</p>
-                </article>
-              </li>
-            </ul>
+            {# get all activities (matrix field) #}
+            {% set activities = entry.homepageWedoActivites.all() %}
+
+            {# display activities #}
+            {% for item in activities %}
+              {% if loop.first %}<ul class="c-vlist  c-vlist--m">{% endif %}
+                <li>
+                  <article class="c-service">
+                    <h3 class="c-service__title">{{ item.mxActivityTitle }}</h3>
+                    <p class="c-service__text">{{ item.mxActivityText }}</p>
+                  </article>
+                </li>
+              {% if loop.last %}</ul>{% endif %}
+            {% endfor %}
 
           </div>
         </div>
@@ -83,9 +72,9 @@
     <div class="l-container">
 
       <div class="l-split">
-        <h2 class="c-smalltitle">Latest projects</h2>
+        <h2 class="c-smalltitle">{{entry.homepageProjectsTitle}}</h2>
         <div>
-          <p class="c-intro">A small selection of projects we have been working on lately.</p>
+          <p class="c-intro">{{entry.homepageProjectsIntro}}</p>
         </div>
       </div>
 
@@ -101,43 +90,23 @@
       #}
       {% set allProjects = craft.entries()
           .section("projects")
+          .limit(4)
+          .orderBy("postDate DESC")
           .all() %}
 
       {% for item in allProjects %}
           {% if loop.first %}<ul class="l-grid  l-grid--2cols@small  l-grid--4cols@large  u-mbe-xl">{% endif %}
 
-          {# 
-            projectImage is an assets fields
-            - relatinal fields (assets, entries, users) always retur n an array of objects
-              - each key of these objects corresponds to the handle of a field defined in the field layout / entry type
-            - we use the `one()` method to only return the first (and only in this case) related item / asset
-          #}
-          {% set img = item.projectImage.one() %}
-
           <li>
-              <article class="c-projectcard">
-                <a class="c-projectcard__link" href="{{ item.url }}/">
-                  <div class="c-projectcard__media">
-                    {% if img %}
-                      <img src="{{ img.getUrl({ width: 450, height: 600 }) }}"
-                           srcset="{{ img.getUrl({ width: 450, height: 600 }) }} 450w,
-                                    {{ img.getUrl({ width: 600, height: 800 }) }} 600w"
-                           sizes="(min-width: 1500px) 345px,
-                                  (min-width: 1024px) 25vw
-                                  (min-width: 500px) 50vw,
-                                  100vw"
-                           class="o-fluidimg"
-                           width="600"
-                           height="800"
-                           alt="">
-                    {% endif %}
-                  </div>
-                  <div class="c-projectcard__body">
-                    <h3 class="c-projectcard__title">{{ item.title }}</h3>
-                    <p class="c-projectcard__tagline">{{ item.projectSubtitle }}</p>
-                  </div>
-                </a>
-              </article>
+              {# 
+                - we include the project card component
+                - we pass it an entry variable in which we store the "item" variable passed by the loop
+                - with_context: false isolate the include completely from the global twig context
+                  - in other words: the only variables available to that include is the ones we pass it
+              #}
+              {{ include("_components/projectcard.twig", {
+                project: item
+              }, with_context: false ) }}
           </li>
 
           {% if loop.last %}</ul>{% endif %}

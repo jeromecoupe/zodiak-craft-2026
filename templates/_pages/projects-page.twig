@@ -1,0 +1,79 @@
+{% extends "_layouts/base.twig" %}
+
+{% block content %}
+  <div class="c-pagesection  c-pagesection--brand">
+    <div class="l-container">
+      {% set formattedTitle = entry.commonBigtitle|replace({ "{{{": "<span>", "}}}": "</span>" }) %}
+      <h1 class="c-pagetitle">{{ formattedTitle|raw }}</h1>
+    </div>
+  </div>
+    <div class="c-pagesection">
+    <div class="l-container">
+
+    {#
+    element / entry Query
+
+    - Get all projects from craft and order them by postDate DESC
+    - Returns an array of objects / Each object key is a field handle
+    - we want to paginate: we need a query that is not executed (we don't want to have an array of objects yet)
+      we do not call all() or one() ... at the end
+    #}
+    {% set projectsQuery =  craft.entries()
+        .section("projects")
+        .limit(12)
+        .orderBy("postDate DESC") %}
+
+    {#
+    paginate thje elements / entry Query 
+    
+    returns two things
+    1. a pagination object (we will use it to create a pagination interface: previous and next page)
+    2. a list of projects for the current page (the number of projects == the limit parameter in the query)
+    #}
+    {% paginate projectsQuery as pagination, projects %}
+
+    {#
+    - Loop and display projects of the current page
+    #}
+      {% for item in projects %}
+        {% if loop.first %}
+            <ul class="l-grid l-grid--2cols@small l-grid--3cols@medium l-grid--4cols@large">
+        {% endif %}
+            <li>
+                {{include('_components/projectcard.twig', {
+                    project: item
+                }, with_context: false)}}
+            </li>
+        {% if loop.last %}
+            </ul>
+        {% endif %}
+      {% endfor %}
+
+    {# pagination interface #}
+    {% if pagination.totalPages > 1 %}
+    
+    <ul class="c-pagination">
+        {% if pagination.getPrevUrl() %}
+            <li>
+                <a class="c-pagination__previous" href="{{ pagination.getPrevUrl() }}">
+                  <span aria-hiden="true">{{ include("_svg/icon_previous.svg") }}</span>
+                  <span class="u-visually-hidden">previous page</span>
+                </a>
+            </li>
+        {% endif %}
+
+         {% if pagination.getNextUrl() %}
+            <li>
+                <a class="c-pagination__next" href="{{ pagination.getNextUrl() }}">
+                  <span aria-hiden="true">{{ include("_svg/icon_next.svg") }}</span>
+                  <span class="u-visually-hidden">next page</span>
+                </a>
+            </li>
+        {% endif %}
+    </p>
+
+    {% endif %}
+
+    </div>
+  </div>
+{% endblock %}
