@@ -20,7 +20,7 @@
     #}
     {% set projectsQuery =  craft.entries()
         .section("projects")
-        .limit(12)
+        .limit(2)
         .orderBy("postDate DESC") %}
 
     {#
@@ -50,13 +50,14 @@
       {% endfor %}
 
     {# pagination interface #}
+    {% dd(pagination) %}
     {% if pagination.totalPages > 1 %}
     
     <ul class="c-pagination">
         {% if pagination.getPrevUrl() %}
             <li>
                 <a class="c-pagination__previous" href="{{ pagination.getPrevUrl() }}">
-                  <span aria-hiden="true">{{ include("_svg/icon_previous.svg") }}</span>
+                  <span aria-hidden="true">{{ include("_svg/icon_previous.svg") }}</span>
                   <span class="u-visually-hidden">previous page</span>
                 </a>
             </li>
@@ -65,7 +66,7 @@
          {% if pagination.getNextUrl() %}
             <li>
                 <a class="c-pagination__next" href="{{ pagination.getNextUrl() }}">
-                  <span aria-hiden="true">{{ include("_svg/icon_next.svg") }}</span>
+                  <span aria-hidden="true">{{ include("_svg/icon_next.svg") }}</span>
                   <span class="u-visually-hidden">next page</span>
                 </a>
             </li>

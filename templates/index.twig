@@ -1,6 +1,11 @@
 {# template to extend (replace any block by block defined in this file) #}
 {% extends "_layouts/base.twig" %}
 
+{# get the porjectPage (single) entry (we need the URL in two places for links) #}
+{% set projectPage = craft.entries()
+  .section("projectsPage")
+  .one() %}
+
 {# content of the page > goes in content block of extended template (base.twig) #}
 {% block content %}
   {#
@@ -17,10 +22,12 @@
       <h1 class="c-pagetitle">{{ formattedTitle|raw }}</h1>
       <div class="c-homeintro">
         <p>{{ entry.commonIntro }}</p>
-        <p><a class="c-ctalink  c-ctalink--invert" href="/projects/">
-          Our projects 
-          {{ include("_svg/arrow.svg") }}
-        </a></p>
+        <p>
+          <a class="c-ctalink  c-ctalink--invert" href="{{ projectPage.url }}">
+            Our projects 
+            {{ include("_svg/arrow.svg") }}
+          </a>
+        </p>
       </div>
     </div>
   </div>
@@ -28,15 +35,15 @@
     {% set pageBanner = entry.commonBannerImage.one() %}
     {% if pageBanner %}
     <img src="{{ pageBanner.geturl({ width: 800, height: 450 }) }}"
-          srcset="{{ pageBanner.geturl({ width: 800, height: 450 }) }} 800w,
-                  {{ pageBanner.geturl({ width: 1024, height: 576  }) }} 1024w,
-                  {{ pageBanner.geturl({ width: 1500, height: 844 }) }} 1500w,"
-          sizes="100vw"
-          loading="lazy"
-          decoding="async"
-          width="1500"
-          height="844"
-          alt="{{ pageBanner.alt }}">
+         srcset="{{ pageBanner.geturl({ width: 800, height: 450 }) }} 800w,
+                 {{ pageBanner.geturl({ width: 1024, height: 576  }) }} 1024w,
+                 {{ pageBanner.geturl({ width: 1500, height: 844 }) }} 1500w,"
+         sizes="100vw"
+         loading="lazy"
+         decoding="async"
+         width="1500"
+         height="844"
+         alt="{{ pageBanner.alt }}">
     {% endif %}
   </div>
   <div class="c-pagesection">
@@ -90,8 +97,8 @@
       #}
       {% set allProjects = craft.entries()
           .section("projects")
-          .limit(4)
           .orderBy("postDate DESC")
+          .limit(4)
           .all() %}
 
       {% for item in allProjects %}
@@ -107,16 +114,19 @@
               {{ include("_components/projectcard.twig", {
                 project: item
               }, with_context: false ) }}
+
           </li>
 
           {% if loop.last %}</ul>{% endif %}
 
       {% endfor %}
 
-      <p><a class="c-ctalink" href="/projects/">
-        More projects 
-        {{ include("_svg/arrow.svg") }}
-      </a></p>
+      <p>
+        <a class="c-ctalink" href="{{ projectPage.url }}">
+          More projects 
+          {{ include("_svg/arrow.svg") }}
+        </a>
+      </p>
     </div>
   </div>
 {% endblock %}
