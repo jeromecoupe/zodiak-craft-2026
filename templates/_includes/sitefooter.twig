@@ -31,26 +31,11 @@
       </div>
 
       <div class="c-sitefooter__mainnav">
-        <nav aria-label="footer navigation" id="footernav">
-          
-            <ul class="c-footernav">
-              <li class="c-footernav__item"><a class="c-footernav__link" href="/">Home</a></li>
-              <li class="c-footernav__item"><a class="c-footernav__link" href="/projects/">Projects</a></li>
-              <li class="c-footernav__item"><a class="c-footernav__link" href="/about/">About</a></li>
-            </ul>
-          
-        </nav>
+        {{ include("_includes/footer-mainnav.twig") }}
       </div>
 
       <div class="c-sitefooter__legalnav">
-        <nav aria-label="legal navigation">
-          
-            <ul class="c-footernav">
-              <li class="c-footernav__item"><a class="c-footernav__link" href="/assets/legal_docs/privacy-policy.pdf">Privacy policy</a></li>
-              <li class="c-footernav__item"><a class="c-footernav__link" href="/assets/legal_docs/terms-of-use.pdf">Terms of use</a></li>
-            </ul>
-          
-        </nav>
+        {{ include("_includes/footer-legalnav.twig") }}
       </div>
       
     </div>

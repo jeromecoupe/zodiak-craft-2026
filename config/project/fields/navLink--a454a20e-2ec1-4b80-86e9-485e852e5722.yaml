@@ -1,0 +1,49 @@
+columnSuffix: null
+handle: navLink
+instructions: null
+name: Link
+searchable: false
+settings:
+  fullGraphqlData: true
+  maxLength: 255
+  showLabelField: false
+  typeSettings:
+    __assoc__:
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              -
+                - 'volume:1b6ffa27-4972-428e-b5e8-5459b8f860de' # Legal Docs
+            -
+              - allowedKinds
+              -
+                - pdf
+            -
+              - showUnpermittedVolumes
+              - ''
+            -
+              - showUnpermittedFiles
+              - ''
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              -
+                - 'custom:4956574a-cd21-4686-8293-edc741b76696'
+            -
+              - showUnpermittedSections
+              - ''
+            -
+              - showUnpermittedEntries
+              - ''
+  types:
+    - entry
+    - asset
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

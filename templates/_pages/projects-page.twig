@@ -1,5 +1,10 @@
 {% extends "_layouts/base.twig" %}
 
+{# current section (single entry used by navigation(s) to show the current item) #}
+{% set currentSection = craft.entries()
+  .section("projectsPage")
+  .one() %}
+
 {% block content %}
   <div class="c-pagesection  c-pagesection--brand">
     <div class="l-container">

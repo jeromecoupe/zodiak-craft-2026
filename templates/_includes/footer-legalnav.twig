@@ -1,0 +1,19 @@
+{% set navItems = craft.entries()
+    .section("legalnav")
+    .all() %}
+
+<nav aria-label="legal navigation">
+
+    {% for item in navItems %}
+        {% if loop.first %}<ul class="c-footernav">{% endif %}
+        
+            <li class="c-footernav__item">
+                <a class="c-footernav__link" href="{{ item.navLink.value }}">
+                    {{ item.navTitle }} 
+                </a>
+            </li>
+
+        {% if loop.last %}</ul>{% endif %}
+    {% endfor %}    
+    
+</nav>

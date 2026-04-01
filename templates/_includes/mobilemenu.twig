@@ -1,18 +1,42 @@
+{#
+  - we need a currentEntry to compare it to the entry we selected in the navigation link field
+    - that currentEntry is either the currentSection specified in the template OR the entry of the single we are on (created by Craft)
+  - we are going to loop over our navigation entries and check the ID of the entry/element in their navLink field
+    - if that ID is the same as the ID of currentEntry, we add the current class and the aria stuff to highlight the nav item
+#}  
+{% set currentEntry = currentSection ?? entry ?? null %}
+
+{% set navItems = craft.entries()
+      .section("mainnav")
+      .all() %}
+
+
 <div class="c-mobilemenu  js-mobilemenu">
   <div class="c-mobilemenu__actions">
     <button class="c-mobilemenu__close  js-menutrigger">Close</button>
   </div>
   <div class="c-mobilemenu__body">
 
-    <nav class="navigation menu">
+    {% for item in navItems %}
+      {% if loop.first %} <ul class="c-mobilenav"> {% endif %}
+        
+        {% set currentClass = "" %}
+        {% set currentAria = "" %}
+        {% if currentEntry and item.navLink.element.id == currentEntry.id  %}
+          {% set currentClass = "is-current" %}
+          {% set currentAria = 'aria-current="page"' %}
+        {% endif %}
 
-      <ul class="c-mobilenav">
-        <li class="c-mobilenav__item"><a class="c-mobilenav__link  is-current" aria-current="page" href="/">Home</a></li>
-        <li class="c-mobilenav__item"><a class="c-mobilenav__link  "  href="/projects/">Projects</a></li>
-        <li class="c-mobilenav__item"><a class="c-mobilenav__link  "  href="/about/">About</a></li>
-      </ul>
-      
-    </nav>
+        <li class="c-mobilenav__item">
+          <a 
+            href="{{item.navLink.value}}"
+            class="c-mobilenav__link  {{ currentClass }}" {{ currentAria }}>
+              {{ item.navTitle }}
+          </a>
+        </li>
+      {% if loop.last %}</ul>
+      {% endif %}
+    {% endfor %}
 
   </div>
 </div>

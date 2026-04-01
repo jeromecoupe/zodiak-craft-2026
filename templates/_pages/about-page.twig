@@ -1,0 +1,22 @@
+{% extends "_layouts/base.twig" %}
+
+{# current section (single entry used by navigation(s) to show the current item) #}
+{% set currentSection = craft.entries()
+  .section("aboutPage")
+  .one() %}
+
+{% block content %}
+  <div class="c-pagesection  c-pagesection--brand">
+    <div class="l-container">
+      {% set formattedTitle = entry.commonBigtitle|replace({ "{{{": "<span>", "}}}": "</span>" }) %}
+      <h1 class="c-pagetitle">{{ formattedTitle|raw }}</h1>
+    </div>
+  </div>
+  <div class="c-pagesection">
+    <div class="l-container">
+
+      <p>About page content goes here</p>
+
+    </div>
+  </div>
+{% endblock %}

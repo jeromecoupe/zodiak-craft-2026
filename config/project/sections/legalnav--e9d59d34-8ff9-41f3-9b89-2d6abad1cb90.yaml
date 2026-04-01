@@ -1,0 +1,19 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 72322d43-076d-4415-8dee-41fd46bbd6b4 # nav
+handle: legalnav
+maxAuthors: 1
+name: 'Legal Nav'
+propagationMethod: all
+siteSettings:
+  f430b339-9348-455d-80ab-66ab0d1a0285: # zodiak
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 406bebb2-7261-4160-b34b-08c6fd795ce1
+type: structure

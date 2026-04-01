@@ -1,0 +1,58 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  c474f5ca-91e6-439e-95c5-4a76a666fe94:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-01T13:24:52+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a96f56b3-4404-44e4-aebb-ce6e7fa3ac47 # Title
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 261ef8e2-1517-4bf3-b990-dc624c7cfc27
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-01T13:24:52+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a454a20e-2ec1-4b80-86e9-485e852e5722 # Link
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62b068c5-b896-4270-910b-cc6c52f04220
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f1667289-8225-46a5-adec-8df316d075c6
+        userCondition: null
+    thumbFieldKey: null
+handle: nav
+hasTitleField: false
+icon: buoy
+name: nav
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{navTitle}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{navTitle}'

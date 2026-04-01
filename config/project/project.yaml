@@ -1,4 +1,4 @@
-dateModified: 1775048110
+dateModified: 1775056146
 elementSources:
   craft\elements\Entry:
     -
@@ -44,6 +44,7 @@ elementSources:
             values:
               - aa27ffac-cd6f-48e6-abcc-c17ad727056d # Homepage
               - 7d134702-58b7-44fe-9a2c-8202781ece8c # Projects Page
+              - bc566a59-9477-4399-b66c-855e13b8094e # About Page
         elementType: craft\elements\Entry
         fieldContext: global
       defaultSort:
@@ -73,11 +74,39 @@ elementSources:
         - postDate
         - 'field:bb20e26f-e0ca-46d3-96d3-db26f1306a8d' # Subtitle
       type: native
+    -
+      heading: Navigations
+      key: 'heading:9d80185a-3b62-45eb-8984-152929f11e94'
+      page: Entries
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:7746ddac-ea86-4e70-bf7a-4f1e55ca102e' # Main Nav
+      page: Entries
+      tableAttributes:
+        - status
+        - link
+      type: native
+    -
+      key: 'section:e9d59d34-8ff9-41f3-9b89-2d6abad1cb90' # Legal Nav
+      page: Entries
+      type: native
 email:
   fromEmail: kerya.nguyen@etu.iad-arts.be
   fromName: zodiak
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  legalDocs:
+    hasUrls: true
+    name: 'Legal Docs'
+    settings:
+      path: '@assetsBasePath/legal_files'
+    type: craft\fs\Local
+    url: '@assetsBaseUrl/legal_files'
   pagesBanners:
     hasUrls: true
     name: 'Pages Banners'
@@ -95,6 +124,7 @@ fs:
 meta:
   __names__:
     0bc00463-b8d9-457c-94dd-421a357df51a: Activities # Activities
+    1b6ffa27-4972-428e-b5e8-5459b8f860de: 'Legal Docs' # Legal Docs
     1dcdcbb0-58d5-40f1-bd6d-4f3f1e32e5dd: Intro # Intro
     2fa12a9c-e0ff-4404-943b-d18c0f0f5f4e: Intro # Intro
     7b5e2946-9b1e-4251-bd6d-040141e14d0b: Title # Title
@@ -105,17 +135,24 @@ meta:
     44f3d9f2-7415-4c94-95ea-69d157eab7e8: Intro # Intro
     47c911c4-4b30-4db7-9321-56f4d39085f9: homepage # homepage
     138f0bd5-183c-480a-acc3-8cc9cb404e25: Text # Text
+    6700c772-ae03-4a90-80fc-4ff1e4c5a5d6: 'About Page' # About Page
+    7746ddac-ea86-4e70-bf7a-4f1e55ca102e: 'Main Nav' # Main Nav
+    72322d43-076d-4415-8dee-41fd46bbd6b4: nav # nav
     85054f16-a647-4e4d-acc2-85259bedbdcf: Image # Image
     11157680-9ec9-4a9f-ac82-6e1137974453: Activites # Activites
     65166879-68f5-4a7f-a618-d9c979404621: 'Project Images' # Project Images
+    a96f56b3-4404-44e4-aebb-ce6e7fa3ac47: Title # Title
+    a454a20e-2ec1-4b80-86e9-485e852e5722: Link # Link
     a1917f55-1534-44e6-9159-e330ae97592e: Title # Title
     aa27ffac-cd6f-48e6-abcc-c17ad727056d: Homepage # Homepage
     bb20e26f-e0ca-46d3-96d3-db26f1306a8d: Subtitle # Subtitle
+    bc566a59-9477-4399-b66c-855e13b8094e: 'About Page' # About Page
     bd941b2b-afd7-417c-a8f0-7c9a2c47bc56: 'Public Schema' # Public Schema
     be6092aa-f7fe-4a07-90c4-d2684bd98478: Title # Title
     c3d44bc9-cd36-4f01-a8b9-780009eeac96: Projects # Projects
     c70bd9ec-4a2e-4602-b512-cf6a522c00d0: Title # Title
     c87d9797-08cc-4928-a9c8-363e490a8db0: Projects # Projects
+    e9d59d34-8ff9-41f3-9b89-2d6abad1cb90: 'Legal Nav' # Legal Nav
     e9fa6b9b-ed8c-436d-bda0-6ef824f5637a: 'Projects Page' # Projects Page
     f430b339-9348-455d-80ab-66ab0d1a0285: zodiak # zodiak
 system:

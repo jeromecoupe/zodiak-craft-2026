@@ -1,18 +1,25 @@
 
-{% extends "_layout/base.twig" %}
+{% extends "_layouts/base.twig" %}
+
+{# current section (single entry used by navigation(s) to show the current item) #}
+{% set currentSection = craft.entries()
+  .section("projectsPage")
+  .one() %}
 
 {% block content %}
-    {#
-    Craft fait du routing (une de ses fonctions principales)
-    - Il regarde la structure de l'URL quand ce template est chargé
-    - Il sait que c'est une URL de détail d'entry (on lui a dit quand on a créé la section)
-    - Comme il est gentil, il nous créée automatiquement une variable 'entry' qui est ... un gros objet
-        - Cet objet entry à comme keys les handle des champs.
-        - Youpieee !
-    #}
+    <div class="c-section">
+        <div class="l-container">
+            {#
+            Craft fait du routing (une de ses fonctions principales)
+            - Il regarde la structure de l'URL quand ce template est chargé
+            - Il sait que c'est une URL de détail d'entry (on lui a dit quand on a créé la section)
+            - Comme il est gentil, il nous créée automatiquement une variable 'entry' qui est ... un gros objet
+                - Cet objet entry à comme keys les handle des champs.
+                - Youpieee !
+            #}
+            <h1>{{ entry.title }}</h1>
+            <p>{{ entry.projectSubtitle }}</p>
+        </div>
+    </div>
 
-
-    <img src="" alt="">
-    <h1>{{ entry.title }}</h1>
-    <p>{{ entry.projectSubtitle }}</p>
 {% endblock %}

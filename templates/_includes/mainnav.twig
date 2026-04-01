@@ -1,7 +1,34 @@
+{#
+  - we need a currentEntry to compare it to the entry we selected in the navigation link field
+    - that currentEntry is either the currentSection specified in the template OR the entry of the single we are on (created by Craft)
+  - we are going to loop over our navigation entries and check the ID of the entry/element in their navLink field
+    - if that ID is the same as the ID of currentEntry, we add the current class and the aria stuff to highlight the nav item
+#}  
+{% set currentEntry = currentSection ?? entry ?? null %}
+
+{% set navItems = craft.entries()
+      .section("mainnav")
+      .all() %}
+
 <nav aria-label="main navigation">
-  <ul class="c-mainnav">
-    <li class="c-mainnav__item"><a class="c-mainnav__link  is-current" aria-current="page" href="/">Home</a></li>
-    <li class="c-mainnav__item"><a class="c-mainnav__link" href="/projects/">Projects</a></li>
-    <li class="c-mainnav__item"><a class="c-mainnav__link" href="/about/">About</a></li>
-  </ul>
+  {% for item in navItems %}
+    {% if loop.first %} <ul class="c-mainnav"> {% endif %}
+      
+      {% set currentClass = "" %}
+      {% set currentAria = "" %}
+      {% if currentEntry and item.navLink.element.id == currentEntry.id  %}
+        {% set currentClass = "is-current" %}
+        {% set currentAria = 'aria-current="page"' %}
+      {% endif %}
+
+      <li class="c-mainnav__item">
+        <a 
+          href="{{item.navLink.value}}"
+          class="c-mainnav__link  {{ currentClass }}" {{ currentAria }}>
+            {{ item.navTitle }}
+        </a>
+      </li>
+    {% if loop.last %}</ul>
+    {% endif %}
+  {% endfor %}
 </nav>

@@ -6,6 +6,11 @@
   .section("projectsPage")
   .one() %}
 
+{# current section (single entry used by navigation(s) to show the current item) #}
+{% set currentSection = craft.entries()
+  .section("homePage")
+  .one() %}
+
 {# content of the page > goes in content block of extended template (base.twig) #}
 {% block content %}
   {#
