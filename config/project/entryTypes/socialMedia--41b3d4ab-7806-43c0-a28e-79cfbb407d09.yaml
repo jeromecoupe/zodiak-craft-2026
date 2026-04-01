@@ -1,0 +1,74 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  eb2bd17b-e0c2-451b-8977-a979861f0bed:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-01T15:49:56+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: daf5c4fa-14fd-425a-b0bf-f47763e04d64 # Social Label
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9774dee8-65a4-4c8e-8a2a-3acc1996b6d1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-01T15:49:56+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7a0839a3-ba27-4ad4-a444-91badb493b8d # Social url
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4fd7d828-2fdd-4b4e-b39d-b31cfbead696
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-01T15:49:56+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 50afdb25-510f-491f-abbd-b31010db0395 # Social Icon
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 95412147-6315-4e54-b502-2a674283ceb7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a06760da-b56a-4c88-85b9-728eccd059c8
+        userCondition: null
+    thumbFieldKey: null
+handle: socialMedia
+hasTitleField: false
+icon: null
+name: 'Social Media'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{socialLabel}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

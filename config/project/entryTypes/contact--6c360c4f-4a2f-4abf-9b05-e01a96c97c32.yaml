@@ -1,0 +1,90 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  d39e0686-3bac-411a-99af-bf7abead6bb8:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-01T15:36:55+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 8a4a8ea9-98bc-4b41-b708-729f70fb6aa1 # Email
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0bd08553-9604-4380-b3ec-32772d99da38
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-01T15:36:55+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7ad7e7fb-40f1-412a-9ee4-2a1438b7f4b0 # Phone
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 13bbcd16-70a2-4e70-921c-d98d99eec77a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-01T15:36:55+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 99f562bb-763e-4670-b29a-ae7420cf657f # Address
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a198dadc-44a9-4df4-80db-d4e933dfbc4c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-01T15:51:16+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 4b82dbba-ea70-404f-954a-e840ff5adb83 # Social Media
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d2126e23-7d10-4296-a259-f645c91e29e2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b6201a6e-4991-47d7-a5ae-14655aa7e5c8
+        userCondition: null
+    thumbFieldKey: null
+handle: contact
+hasTitleField: false
+icon: null
+name: Contact
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: contact
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: contact

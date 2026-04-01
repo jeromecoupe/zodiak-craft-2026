@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: contactSocialmedia
+instructions: null
+name: 'Social Media'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 41b3d4ab-7806-43c0-a28e-79cfbb407d09 # Social Media
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: 6
+  minEntries: 1
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

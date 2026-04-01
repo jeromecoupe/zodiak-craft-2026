@@ -1,0 +1,16 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 6c360c4f-4a2f-4abf-9b05-e01a96c97c32 # Contact
+handle: contact
+maxAuthors: 1
+name: Contact
+propagationMethod: all
+siteSettings:
+  f430b339-9348-455d-80ab-66ab0d1a0285: # zodiak
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

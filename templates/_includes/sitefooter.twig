@@ -5,17 +5,26 @@
       
       <div class="c-sitefooter__links">
         <ul class="c-contactlist">
-          <li class="c-contactlist__item"><a class="c-contactlist__link" href="mailto:hello@zodiak.agency">hello@zodiak.agency</a></li>
-          <li class="c-contactlist__item"><a class="c-contactlist__link" href="tel:00322345678">+32 (0)2 345 678</a></li>
+          <li class="c-contactlist__item"><a class="c-contactlist__link" href="mailto:hello@zodiak.agency">{{ contact.contactEmail }}</a></li>
+          <li class="c-contactlist__item"><a class="c-contactlist__link" href="tel:00322345678">{{ contact.contactPhone }}</a></li>
         </ul>
       </div>
       <div class="c-sitefooter__social">
         <nav aria-label="social media">
-          <ul class="c-socialmedia">
-            <li class="c-socialmedia__item"><a class="c-socialmedia__link" href="#" aria-label="Instragram">{{ include("_svg/icon_instagram.svg") }}</a></li>
-            <li class="c-socialmedia__item"><a class="c-socialmedia__link" href="#" aria-label="Facebook">{{ include("_svg/icon_facebook.svg") }}</a></li>
-            <li class="c-socialmedia__item"><a class="c-socialmedia__link" href="#" aria-label="Twitter">{{ include("_svg/icon_twitter.svg") }}</a></li>
-          </ul>
+        {% for item in contact.contactSocialmedia.all() %}
+        {% if loop.first %}<ul class="c-socialmedia">{% endif %}
+
+            {% set svgIcon = item.socialIcon.one() %}
+            <li class="c-socialmedia__item">
+              <a 
+                class="c-socialmedia__link" 
+                href="{{ item.socialUrl.value }}" 
+                aria-label="{{ item.socialLabel }}">
+                  {% if svgIcon %}{{ svg(svgIcon) }}{% endif %}
+              </a>
+            </li>
+        {% if loop.last %}</ul>{% endif %}
+        {% endfor %}
         </nav>
       </div>
     </div>

@@ -1,0 +1,37 @@
+columnSuffix: null
+handle: socialIcon
+instructions: null
+name: 'Social Icon'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: false
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultPlacement: end
+  defaultUploadLocationSource: 'volume:53233200-875a-49c4-8a59-f791b0c59dc7' # Social Icons
+  defaultUploadLocationSubpath: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:65166879-68f5-4a7f-a618-d9c979404621' # Project Images
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add icon'
+  showSearchInput: false
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:53233200-875a-49c4-8a59-f791b0c59dc7' # Social Icons
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: thumbs
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets
