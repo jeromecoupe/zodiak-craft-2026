@@ -1,0 +1,37 @@
+columnSuffix: null
+handle: projectBody
+instructions: null
+name: 'Project Body'
+searchable: false
+settings:
+  createButtonLabel: 'New body block'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 486b3cc3-7c3e-4fbe-b75b-5868d11f6223 # Text
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 1e72b394-193b-4f83-af61-a547e7a675e4 # Image
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

@@ -1,0 +1,58 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  13cc0896-eb4b-4daf-92ae-a8dd0702a821:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-08T14:00:42+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 5549b955-0628-4cc0-a95e-29e4add12049 # Image
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 44f28ebc-9527-440c-a493-1e5c646a66ae
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-08T14:00:42+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 09636153-a4c9-4368-9708-28c550342d07 # Image caption
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 71c2494a-503a-4239-9b61-a094d5a8f421
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b20e8bb1-4c39-4efc-93f1-932e1170e5ff
+        userCondition: null
+    thumbFieldKey: null
+handle: mxBlockImage
+hasTitleField: false
+icon: image-landscape
+name: Image
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: 'image block'

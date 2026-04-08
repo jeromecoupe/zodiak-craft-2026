@@ -70,6 +70,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-04-08T13:42:24+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d68af3bf-2618-4a77-a0eb-bd002ddc4520 # Project Body
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 67a3786e-24a4-408d-8b52-03710ed10775
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 365eff29-6460-438c-81c0-a9fea3fe3c67
         userCondition: null
