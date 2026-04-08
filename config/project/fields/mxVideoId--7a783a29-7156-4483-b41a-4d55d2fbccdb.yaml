@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: mxVideoId
+instructions: 'ID of the video. When you watch a video on YouTube, it''s the part after "v=". For example the ID of "https://www.youtube.com/watch?v=yJmJs0Zjw3k" is "yJmJs0Zjw3k"'
+name: 'Video ID'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 64
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

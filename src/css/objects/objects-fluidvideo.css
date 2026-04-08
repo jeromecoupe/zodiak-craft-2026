@@ -4,6 +4,8 @@
 
 .o-fluidvideo {
   aspect-ratio: 16 / 9;
+  inline-size: 100%;
+  block-size: auto;
   background-color: #000000;
 }
 

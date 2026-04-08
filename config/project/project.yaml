@@ -1,4 +1,4 @@
-dateModified: 1775657822
+dateModified: 1775664091
 elementSources:
   craft\elements\Entry:
     -
@@ -172,6 +172,7 @@ meta:
     4eb6c696-6c7a-4399-8596-2a7ba43aaefd: Text # Text
     6c360c4f-4a2f-4abf-9b05-e01a96c97c32: Contact # Contact
     7a0839a3-ba27-4ad4-a444-91badb493b8d: 'Social url' # Social url
+    7a783a29-7156-4483-b41a-4d55d2fbccdb: 'Video ID' # Video ID
     7ad7e7fb-40f1-412a-9ee4-2a1438b7f4b0: Phone # Phone
     7b5e2946-9b1e-4251-bd6d-040141e14d0b: Title # Title
     7c39293b-eed9-4ccd-9fef-54ef45046927: 'Banner Image' # Banner Image
@@ -212,6 +213,7 @@ meta:
     daf5c4fa-14fd-425a-b0bf-f47763e04d64: 'Social Label' # Social Label
     e9d59d34-8ff9-41f3-9b89-2d6abad1cb90: 'Legal Nav' # Legal Nav
     e9fa6b9b-ed8c-436d-bda0-6ef824f5637a: 'Projects Page' # Projects Page
+    f47afd97-c63c-4b73-98e8-3308118732a8: Video # Video
     f430b339-9348-455d-80ab-66ab0d1a0285: zodiak # zodiak
 plugins:
   ckeditor:

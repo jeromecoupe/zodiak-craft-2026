@@ -24,6 +24,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - f47afd97-c63c-4b73-98e8-3308118732a8 # Video
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

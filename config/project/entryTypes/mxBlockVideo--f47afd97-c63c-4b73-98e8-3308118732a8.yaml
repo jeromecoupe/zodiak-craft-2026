@@ -1,0 +1,42 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  4653b82c-d6e4-4f0c-b391-079073da2f45:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-08T16:01:28+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7a783a29-7156-4483-b41a-4d55d2fbccdb # Video ID
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5de05f78-34b6-4c28-a786-a983fc85af88
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9fa585f5-55af-422d-8704-58d1fd836e03
+        userCondition: null
+    thumbFieldKey: null
+handle: mxBlockVideo
+hasTitleField: false
+icon: video
+name: Video
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

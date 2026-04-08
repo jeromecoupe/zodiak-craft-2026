@@ -70,11 +70,22 @@
                                 </figcaption>
                             </figure>
                         </div>
-
+                    
+                    {% case "mxBlockVideo" %}
+                        <div class="c-casemodule">
+                            <div class="o-fluidvideo">
+                                {% set videoID = "yJmJs0Zjw3k" %}
+                                <iframe
+                                    src="https://www.youtube-nocookie.com/embed/{{videoID}}"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
                 {% endswitch %}
                 
+                
             {% endfor %}
-
 
         </div>
     </div>
