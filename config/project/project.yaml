@@ -1,4 +1,4 @@
-dateModified: 1775651899
+dateModified: 1775657822
 elementSources:
   craft\elements\Entry:
     -
@@ -140,6 +140,13 @@ fs:
       path: '@assetsBasePath/pages_banners'
     type: craft\fs\Local
     url: '@assetsBaseUrl/pages_banners'
+  projectContentImages:
+    hasUrls: true
+    name: 'Project content images'
+    settings:
+      path: '@assetsBasePath/project_content_images'
+    type: craft\fs\Local
+    url: '@assetsBaseUrl/project_content_images'
   projectsImages:
     hasUrls: true
     name: 'Projects Images'
@@ -159,8 +166,10 @@ meta:
     0bc00463-b8d9-457c-94dd-421a357df51a: Activities # Activities
     1b6ffa27-4972-428e-b5e8-5459b8f860de: 'Legal Docs' # Legal Docs
     1dcdcbb0-58d5-40f1-bd6d-4f3f1e32e5dd: Intro # Intro
+    1e72b394-193b-4f83-af61-a547e7a675e4: Image # Image
     2fa12a9c-e0ff-4404-943b-d18c0f0f5f4e: Intro # Intro
     4b82dbba-ea70-404f-954a-e840ff5adb83: 'Social Media' # Social Media
+    4eb6c696-6c7a-4399-8596-2a7ba43aaefd: Text # Text
     6c360c4f-4a2f-4abf-9b05-e01a96c97c32: Contact # Contact
     7a0839a3-ba27-4ad4-a444-91badb493b8d: 'Social url' # Social url
     7ad7e7fb-40f1-412a-9ee4-2a1438b7f4b0: Phone # Phone
@@ -170,16 +179,20 @@ meta:
     8a4a8ea9-98bc-4b41-b708-729f70fb6aa1: Email # Email
     11eb6c53-5e08-483a-aa33-ef3e5dfc2456: zodiak # zodiak
     22cd74bf-020d-4724-aa7e-fab6166f847b: 'Pages Banners' # Pages Banners
+    25bcba6c-988e-47ba-bf0a-3dd58cfd7ec7: 'Project content images' # Project content images
     41b3d4ab-7806-43c0-a28e-79cfbb407d09: 'Social Media' # Social Media
     44f3d9f2-7415-4c94-95ea-69d157eab7e8: Intro # Intro
     47c911c4-4b30-4db7-9321-56f4d39085f9: homepage # homepage
     50afdb25-510f-491f-abbd-b31010db0395: 'Social Icon' # Social Icon
     99f562bb-763e-4670-b29a-ae7420cf657f: Address # Address
     138f0bd5-183c-480a-acc3-8cc9cb404e25: Text # Text
+    486b3cc3-7c3e-4fbe-b75b-5868d11f6223: Text # Text
+    5549b955-0628-4cc0-a95e-29e4add12049: Image # Image
     6700c772-ae03-4a90-80fc-4ff1e4c5a5d6: 'About Page' # About Page
     7746ddac-ea86-4e70-bf7a-4f1e55ca102e: 'Main Nav' # Main Nav
     72322d43-076d-4415-8dee-41fd46bbd6b4: nav # nav
     85054f16-a647-4e4d-acc2-85259bedbdcf: Image # Image
+    09636153-a4c9-4368-9708-28c550342d07: 'Image caption' # Image caption
     11157680-9ec9-4a9f-ac82-6e1137974453: Activites # Activites
     53233200-875a-49c4-8a59-f791b0c59dc7: 'Social Icons' # Social Icons
     65166879-68f5-4a7f-a618-d9c979404621: 'Project Images' # Project Images
@@ -194,11 +207,17 @@ meta:
     c3d44bc9-cd36-4f01-a8b9-780009eeac96: Projects # Projects
     c70bd9ec-4a2e-4602-b512-cf6a522c00d0: Title # Title
     c87d9797-08cc-4928-a9c8-363e490a8db0: Projects # Projects
+    d68af3bf-2618-4a77-a0eb-bd002ddc4520: 'Project Body' # Project Body
     d560cc9f-ac1a-4672-b2a5-765cbaf2c097: Contact # Contact
     daf5c4fa-14fd-425a-b0bf-f47763e04d64: 'Social Label' # Social Label
     e9d59d34-8ff9-41f3-9b89-2d6abad1cb90: 'Legal Nav' # Legal Nav
     e9fa6b9b-ed8c-436d-bda0-6ef824f5637a: 'Projects Page' # Projects Page
     f430b339-9348-455d-80ab-66ab0d1a0285: zodiak # zodiak
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.0.0.1
 system:
   edition: pro
   live: true

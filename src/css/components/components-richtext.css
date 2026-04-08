@@ -1,0 +1,26 @@
+/* ---------------------------------
+=rich text
+--------------------------------- */
+
+/*
+- Used to control styles of titles in rich text blocks created by users with an editor
+*/
+
+:where(.c-richtext h2, .c-richtext h3, .c-richtext h4) {
+  font-family: var(--fontstack-alt);
+  font-weight: 500;
+  line-height: 1.24;
+  margin-block-end: 0.5em;
+}
+
+.c-richtext h2 {
+  font-size: clamp(23 / 16 * 1rem, 1rem + 1vw, 31 / 16 * 1rem);
+}
+
+.c-richtext h3 {
+  font-size: clamp(19 / 16 * 1rem, 1rem + 0.75vw, 26 / 16 * 1rem);
+}
+
+.c-richtext h4 {
+  font-size: calc(18 / 16 * 1rem);
+}

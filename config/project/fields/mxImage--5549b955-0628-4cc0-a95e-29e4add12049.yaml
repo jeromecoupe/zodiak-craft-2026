@@ -1,0 +1,37 @@
+columnSuffix: null
+handle: mxImage
+instructions: null
+name: Image
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: false
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultPlacement: end
+  defaultUploadLocationSource: 'volume:25bcba6c-988e-47ba-bf0a-3dd58cfd7ec7' # Project content images
+  defaultUploadLocationSubpath: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:65166879-68f5-4a7f-a618-d9c979404621' # Project Images
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add image'
+  showSearchInput: false
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:25bcba6c-988e-47ba-bf0a-3dd58cfd7ec7' # Project content images
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: thumbs
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

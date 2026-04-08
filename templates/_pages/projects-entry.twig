@@ -7,7 +7,22 @@
   .one() %}
 
 {% block content %}
-    <div class="c-section">
+    {% set projectBanner = entry.projectImage.one() %}
+    
+    <div class="c-banner">
+        <img src="{{ projectBanner.geturl({ width: 800, height: 450 }) }}"
+             srcset="{{ projectBanner.geturl({ width: 800, height: 450 }) }} 800w,
+                     {{ projectBanner.geturl({ width: 1024, height: 576  }) }} 1024w,
+                     {{ projectBanner.geturl({ width: 1500, height: 844 }) }} 1500w,"
+             sizes="100vw"
+             loading="lazy"
+             decoding="async"
+             width="1500"
+             height="844"
+             alt="{{ projectBanner.alt }}">
+    </div>
+
+    <div class="c-pagesection">
         <div class="l-container">
             {#
             Craft fait du routing (une de ses fonctions principales)
@@ -17,8 +32,50 @@
                 - Cet objet entry à comme keys les handle des champs.
                 - Youpieee !
             #}
-            <h1>{{ entry.title }}</h1>
-            <p>{{ entry.projectSubtitle }}</p>
+            <h1 class="c-h1 u-mbe-xs">{{ entry.title }}</h1>
+            <p class="c-subtitle">{{ entry.projectSubtitle }}</p>
+            
+            {#
+            Champ matrix:
+                - loop pour récupérer les objets dans projectBody
+                - switch pour changer au cas par cas (texte ou image)
+            #}
+            {% set matrixBlocks = entry.projectBody.all() %}
+            {% for matrixBlock in matrixBlocks %}               
+                {% switch matrixBlock.type %}
+                
+                    {% case "mxBlockText" %}
+
+                        <div class="c-casemodule c-richtext">
+                            {{matrixBlock.mxText}}
+                        </div>
+                
+                    {% case "mxBlockImage" %}
+                
+                        <div class="c-casemodule">
+                            {% set img = matrixBlock.mxImage.one() %}
+                            <figure class="c-figure">
+                                <img 
+                                    src="{{ img.getUrl({ width: 800 }) }}" 
+                                    srcset="{{ img.getUrl({ width: 800 }) }} 800w,
+                                            {{ img.getUrl({ width: 1024 }) }} 1024w,
+                                            {{ img.getUrl({ width: 1500 }) }} 1500w"
+                                    sizes="100vw"
+                                    class="o-fluidimg"
+                                    loading="lazy"
+                                    decoding="async"
+                                    alt="">
+                                <figcaption class="c-figure__caption">
+                                    <p>{{matrixBlock.mxImageCaption}}</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                {% endswitch %}
+                
+            {% endfor %}
+
+
         </div>
     </div>
 
