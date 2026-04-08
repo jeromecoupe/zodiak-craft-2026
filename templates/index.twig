@@ -37,6 +37,10 @@
     </div>
   </div>
   <div class="c-banner">
+    {# 
+      - assets is a relational fields that always returns an array of objects (even if there is only one element like here). 
+      - To get the first / one and only asset, we use the .one() method. 
+    #}
     {% set pageBanner = entry.commonBannerImage.one() %}
     {% if pageBanner %}
     <img src="{{ pageBanner.geturl({ width: 800, height: 450 }) }}"

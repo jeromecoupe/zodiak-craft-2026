@@ -27,6 +27,13 @@
         .section("projects")
         .limit(2)
         .orderBy("postDate DESC") %}
+    
+    {# We execute the query with .count(), returns the total number of projects found  #}
+    {% set totalProjects = craft.entries()
+        .section("projects")
+        .count() %}
+    
+    <p>Projects found: {{ totalProjects }}</p>
 
     {#
     paginate thje elements / entry Query 
