@@ -25,7 +25,7 @@
     #}
     {% set projectsQuery =  craft.entries()
         .section("projects")
-        .limit(2)
+        .limit(4)
         .orderBy("postDate DESC") %}
     
     {# We execute the query with .count(), returns the total number of projects found  #}

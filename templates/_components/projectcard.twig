@@ -7,7 +7,7 @@ projectImage is an assets fields
 {% set url = project.url ?? null %}
 {% set title = project.title ?? null %}
 {% set subtitle = project.projectSubtitle ?? null %}
-{% set img = project.projectImage.one() ?? null %}
+{% set img = project.projectImage.eagerly().one() ?? null %}
 
 
 <article class="c-projectcard">

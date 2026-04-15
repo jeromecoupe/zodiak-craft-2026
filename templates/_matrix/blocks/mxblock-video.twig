@@ -1,0 +1,32 @@
+
+{% set mxBlock = mxBlock ?? null %}
+{% set videoID = mxBlock.mxVideoId ?? null %}
+{% set provider = mxBlock.mxServiceProvider.value ?? null %}
+{% set caption = mxBlock.mxVideoCaption ?? null %}
+
+{% switch provider %}
+
+    {% case "youtube" %}
+        {% set iframesrc = "https://www.youtube-nocookie.com/embed/#{ videoID }" %}
+
+    {% case "vimeo" %}
+        {% set iframesrc = "https://player.vimeo.com/video/#{ videoID }" %}
+
+{% endswitch %}
+
+<div class="c-casemodule">
+    <div class="l-container">
+        <figure class="c-figure">
+            <iframe
+                src="{{iframesrc}}"
+                class="o-fluidvideo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+            <figcaption class="c-figure__caption">
+                <p>{{ caption }}</p>
+            </figcaption>
+        </figure>
+    </div>
+</div>

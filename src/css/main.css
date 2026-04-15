@@ -46,6 +46,7 @@
 @import "components/components-copyright.css" layer(components);
 @import "components/components-contactlist.css" layer(components);
 @import "components/components-richtext.css" layer(components);
+@import "components/components-lead.css" layer(components);
 
 @import "utilities/utilities-text-colors.css" layer(utilities);
 @import "utilities/utilities-spacing.css" layer(utilities);

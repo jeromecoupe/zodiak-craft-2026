@@ -23,7 +23,6 @@
     </div>
 
     <div class="c-pagesection">
-        <div class="l-container">
             {#
             Craft fait du routing (une de ses fonctions principales)
             - Il regarde la structure de l'URL quand ce template est chargé
@@ -32,60 +31,18 @@
                 - Cet objet entry à comme keys les handle des champs.
                 - Youpieee !
             #}
-            <h1 class="c-h1 u-mbe-xs">{{ entry.title }}</h1>
-            <p class="c-subtitle">{{ entry.projectSubtitle }}</p>
             
-            {#
-            Champ matrix:
-                - loop pour récupérer les objets dans projectBody
-                - switch pour changer au cas par cas (texte ou image)
-            #}
-            {% set matrixBlocks = entry.projectBody.all() %}
-            {% for matrixBlock in matrixBlocks %}               
-                {% switch matrixBlock.type %}
-                
-                    {% case "mxBlockText" %}
+            <div class="c-casemodule">
+                <div class="l-container l-container--copy">
+                    <h1 class="c-h1 u-mbe-xs">{{ entry.title }}</h1>
+                    <p class="c-subtitle">{{ entry.projectSubtitle }}</p>
+                    <p class="c-lead">{{ entry.commonIntro }}</p>
+                </div>
+            </div>
 
-                        <div class="c-casemodule c-richtext">
-                            {{matrixBlock.mxText}}
-                        </div>
-                
-                    {% case "mxBlockImage" %}
-                
-                        <div class="c-casemodule">
-                            {% set img = matrixBlock.mxImage.one() %}
-                            <figure class="c-figure">
-                                <img 
-                                    src="{{ img.getUrl({ width: 800 }) }}" 
-                                    srcset="{{ img.getUrl({ width: 800 }) }} 800w,
-                                            {{ img.getUrl({ width: 1024 }) }} 1024w,
-                                            {{ img.getUrl({ width: 1500 }) }} 1500w"
-                                    sizes="100vw"
-                                    class="o-fluidimg"
-                                    loading="lazy"
-                                    decoding="async"
-                                    alt="">
-                                <figcaption class="c-figure__caption">
-                                    <p>{{matrixBlock.mxImageCaption}}</p>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    
-                    {% case "mxBlockVideo" %}
-                        <div class="c-casemodule">
-                            <div class="o-fluidvideo">
-                                {% set videoID = "yJmJs0Zjw3k" %}
-                                <iframe
-                                    src="https://www.youtube-nocookie.com/embed/{{videoID}}"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen>
-                                </iframe>
-                            </div>
-                        </div>
-                {% endswitch %}
-                
-                
-            {% endfor %}
+            {{ include("_matrix/project-body.twig", {
+                matrixBlocks: entry.projectBody.all()
+            }, with_context: false) }}
 
         </div>
     </div>

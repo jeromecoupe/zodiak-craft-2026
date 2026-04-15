@@ -1,4 +1,4 @@
-dateModified: 1775664091
+dateModified: 1776259838
 elementSources:
   craft\elements\Entry:
     -
@@ -185,6 +185,7 @@ meta:
     44f3d9f2-7415-4c94-95ea-69d157eab7e8: Intro # Intro
     47c911c4-4b30-4db7-9321-56f4d39085f9: homepage # homepage
     50afdb25-510f-491f-abbd-b31010db0395: 'Social Icon' # Social Icon
+    84b649ee-bcff-4fbe-a0dc-875dd3e1509d: 'Video Caption' # Video Caption
     99f562bb-763e-4670-b29a-ae7420cf657f: Address # Address
     138f0bd5-183c-480a-acc3-8cc9cb404e25: Text # Text
     486b3cc3-7c3e-4fbe-b75b-5868d11f6223: Text # Text
@@ -197,6 +198,7 @@ meta:
     11157680-9ec9-4a9f-ac82-6e1137974453: Activites # Activites
     53233200-875a-49c4-8a59-f791b0c59dc7: 'Social Icons' # Social Icons
     65166879-68f5-4a7f-a618-d9c979404621: 'Project Images' # Project Images
+    a00a3b14-d4d5-4fb8-b3e4-14df03b96eb3: 'Service Provider' # Service Provider
     a96f56b3-4404-44e4-aebb-ce6e7fa3ac47: Title # Title
     a454a20e-2ec1-4b80-86e9-485e852e5722: Link # Link
     a1917f55-1534-44e6-9159-e330ae97592e: Title # Title

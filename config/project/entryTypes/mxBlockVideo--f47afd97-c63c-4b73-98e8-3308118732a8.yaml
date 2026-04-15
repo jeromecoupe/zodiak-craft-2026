@@ -9,6 +9,22 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2026-04-15T12:58:54+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a00a3b14-d4d5-4fb8-b3e4-14df03b96eb3 # Service Provider
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c59bee9-fa78-431c-91b7-6cd4a7d02d49
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-04-08T16:01:28+00:00'
             editCondition: null
             elementCondition: null
@@ -21,6 +37,22 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 5de05f78-34b6-4c28-a786-a983fc85af88
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-15T13:18:14+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 84b649ee-bcff-4fbe-a0dc-875dd3e1509d # Video Caption
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 09676648-780e-498c-a300-70887680cae2
             userCondition: null
             warning: null
             width: 100

@@ -1,0 +1,29 @@
+
+
+{% set mxBlock = mxBlock ?? null %}
+{% set img = mxBlock.mxImage.eagerly().one() ?? null %}
+{% set caption = mxBlock.mxImageCaption ?? null %}
+
+<div class="c-casemodule">
+    <div class="l-container">
+        {% if img %}
+            <figure class="c-figure">
+                <img
+                    src="{{ img.getUrl({ width: 800 }) }}"
+                    srcset="{{ img.getUrl({ width: 800 }) }} 800w,
+                            {{ img.getUrl({ width: 1024 }) }} 1024w,
+                            {{ img.getUrl({ width: 1500 }) }} 1500w"
+                    sizes="100vw"
+                    width="{{ img.getWidth({ width: 1500 }) }}"
+                    height="{{ img.getHeight({ width: 1500 }) }}"
+                    class="o-fluidimg"
+                    loading="lazy"
+                    decoding="async"
+                    alt="">
+                <figcaption class="c-figure__caption">
+                    <p>{{ caption }}</p>
+                </figcaption>
+            </figure>
+        {% endif %}
+    </div>
+</div>

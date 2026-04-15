@@ -1,0 +1,31 @@
+{#
+Champ matrix:
+    - loop pour récupérer les objets dans projectBody
+    - switch pour changer au cas par cas (texte ou image)
+#}
+{% set mxBlocks = matrixBlocks %}
+{% for mxBlock in mxBlocks %}               
+    {% switch mxBlock.type %}
+    
+        {% case "mxBlockText" %}
+
+            {{ include("_matrix/blocks/mxblock-text.twig", {
+                mxBlock: mxBlock
+            }, with_context: false) }}
+    
+        {% case "mxBlockImage" %}
+    
+            {{ include("_matrix/blocks/mxblock-image.twig", {
+                mxBlock: mxBlock
+            }, with_context: false) }}
+        
+        {% case "mxBlockVideo" %}
+
+            {{ include("_matrix/blocks/mxblock-video.twig", {
+                mxBlock: mxBlock
+            }, with_context: false) }}
+            
+    {% endswitch %}
+    
+    
+{% endfor %}
