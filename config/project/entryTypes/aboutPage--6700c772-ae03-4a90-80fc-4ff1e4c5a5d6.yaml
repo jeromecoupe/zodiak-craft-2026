@@ -24,6 +24,82 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-04-22T10:41:32+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: eabe3d76-7902-4f3b-990c-1bb3e7c9c908
+            userCondition: null
+          -
+            dateAdded: '2026-04-22T10:41:32+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 0194e399-6e46-4fac-8139-8f40b83d0b3e # Crew title
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5ecf6e1-2c0e-41cf-bc94-d9aa85240bd2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-22T10:41:32+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 4a678e21-88cc-4e41-8c6d-0ca65246b0e8 # Crew Intro
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4f407617-6d10-4445-860d-c6c2b162f116
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-22T10:41:32+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 40869031-7872-48e8-8232-5bc060176824
+            userCondition: null
+          -
+            dateAdded: '2026-04-22T10:41:32+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: eb316b43-61df-485f-a381-a99d83442a89 # Values title
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd322d5c-5d2b-473a-af57-6a0d9d417259
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-22T10:41:32+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 5b977fef-d584-42a1-adb0-4369410a4749 # Values intro
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 92f83a19-24c6-466d-b307-ed1f11a8c31a
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 2ba2fffe-6a65-4ba6-b769-c38f7ec7bc8a
         userCondition: null

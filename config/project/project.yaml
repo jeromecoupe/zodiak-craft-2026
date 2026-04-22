@@ -1,4 +1,4 @@
-dateModified: 1776259838
+dateModified: 1776854492
 elementSources:
   craft\elements\Entry:
     -
@@ -168,8 +168,10 @@ meta:
     1dcdcbb0-58d5-40f1-bd6d-4f3f1e32e5dd: Intro # Intro
     1e72b394-193b-4f83-af61-a547e7a675e4: Image # Image
     2fa12a9c-e0ff-4404-943b-d18c0f0f5f4e: Intro # Intro
+    4a678e21-88cc-4e41-8c6d-0ca65246b0e8: 'Crew Intro' # Crew Intro
     4b82dbba-ea70-404f-954a-e840ff5adb83: 'Social Media' # Social Media
     4eb6c696-6c7a-4399-8596-2a7ba43aaefd: Text # Text
+    5b977fef-d584-42a1-adb0-4369410a4749: 'Values intro' # Values intro
     6c360c4f-4a2f-4abf-9b05-e01a96c97c32: Contact # Contact
     7a0839a3-ba27-4ad4-a444-91badb493b8d: 'Social url' # Social url
     7a783a29-7156-4483-b41a-4d55d2fbccdb: 'Video ID' # Video ID
@@ -188,6 +190,7 @@ meta:
     84b649ee-bcff-4fbe-a0dc-875dd3e1509d: 'Video Caption' # Video Caption
     99f562bb-763e-4670-b29a-ae7420cf657f: Address # Address
     138f0bd5-183c-480a-acc3-8cc9cb404e25: Text # Text
+    0194e399-6e46-4fac-8139-8f40b83d0b3e: 'Crew title' # Crew title
     486b3cc3-7c3e-4fbe-b75b-5868d11f6223: Text # Text
     5549b955-0628-4cc0-a95e-29e4add12049: Image # Image
     6700c772-ae03-4a90-80fc-4ff1e4c5a5d6: 'About Page' # About Page
@@ -215,6 +218,7 @@ meta:
     daf5c4fa-14fd-425a-b0bf-f47763e04d64: 'Social Label' # Social Label
     e9d59d34-8ff9-41f3-9b89-2d6abad1cb90: 'Legal Nav' # Legal Nav
     e9fa6b9b-ed8c-436d-bda0-6ef824f5637a: 'Projects Page' # Projects Page
+    eb316b43-61df-485f-a381-a99d83442a89: 'Values title' # Values title
     f47afd97-c63c-4b73-98e8-3308118732a8: Video # Video
     f430b339-9348-455d-80ab-66ab0d1a0285: zodiak # zodiak
 plugins:

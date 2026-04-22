@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: aboutValuesTitle
+instructions: null
+name: 'Values title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 36
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
