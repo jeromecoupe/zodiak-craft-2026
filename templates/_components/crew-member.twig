@@ -1,0 +1,25 @@
+{% set item = crew ?? null %}
+{% set img = item.crewImage.with(['crewImage']).one() %}
+
+<li>
+    <div class="c-teamcard">
+        <p class="c-teamcard__media">
+            <img 
+            src="{{img.getUrl({width: 450, height:450})}}"
+            srcset="{{img.getUrl({width: 450, height:450})}} 450w,
+                    {{img.getUrl({width: 600, height:600})}} 600w"
+            sizes="(min-width: 1024px) 33vw,
+                    (min-width: 500px) 50vw,
+                    100vw"
+            class="o-fluidimg"
+            width="600"
+            height="600"
+            alt="{{item.crewName}} {{item.crewFamilyName}}">
+        </p>
+        <div class="c-teamcard__body">
+            <h3 class="c-teamcard__name">{{item.crewName}} {{item.crewFamilyName}}</h3>
+            <p class="c-teamcard__role">{{item.crewRole}}</p>
+            <p>{{item.testCrew}}</p>
+        </div>
+    </div>
+</li>

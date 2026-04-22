@@ -22,7 +22,19 @@
         </div>
       </div>
 
-      <p>Crew membres go here</p>
+      {% set allCrew = craft.entries()
+        .section("crew")
+        .orderBy("crewFamilyName ASC")
+        .all()%}
+      {% for item in allCrew %}
+        {% if loop.first %}<ul class="l-grid  l-grid--2cols@small  l-grid--3cols@large">{% endif %}
+          
+          {{include("_components/crew-member.twig", {
+            crew: item 
+          }, with_context: false)}}     
+
+        {% if loop.last %}</ul>{% endif %}
+      {% endfor %}
 
     </div>
   </div>
@@ -33,7 +45,18 @@
         <h2 class="c-smalltitle">{{ entry.aboutValuesTitle }}</h2>
         <div>
           <p class="c-intro">{{ entry.aboutValuesIntro }}</p>
-          <p>Values go here</p>
+          {% set values = entry.mxAboutValues.all()%}
+          {% for item in values %}
+            {% if loop.first %}<ul class="l-grid  l-grid--auto">{% endif %}
+              <li>
+                <div class="c-value">
+                  <h3 class="c-value__title">{{item.mxValueTitle}}</h3>
+                  <p class="c-value__text">{{item.mxValueDescription}}</p>
+                </div>
+              </li>
+            {% if loop.last %}</ul>{% endif %}
+            
+          {% endfor %}
         </div>
       </div>
 

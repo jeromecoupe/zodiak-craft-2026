@@ -1,0 +1,16 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 36f951f9-2a4b-4123-a814-cdf33136c8b5 # Crew
+handle: crew
+maxAuthors: 1
+name: Crew
+propagationMethod: all
+siteSettings:
+  f430b339-9348-455d-80ab-66ab0d1a0285: # zodiak
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel
