@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: mxAboutValues
+instructions: null
+name: Values
+searchable: false
+settings:
+  createButtonLabel: Values
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - bf9d9db3-2db9-4eb1-af77-db57763b3af2 # Value
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: 6
+  minEntries: 1
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

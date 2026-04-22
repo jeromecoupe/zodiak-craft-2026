@@ -1,4 +1,4 @@
-dateModified: 1776854492
+dateModified: 1776861727
 elementSources:
   craft\elements\Entry:
     -
@@ -75,6 +75,26 @@ elementSources:
         - 'field:bb20e26f-e0ca-46d3-96d3-db26f1306a8d' # Subtitle
       type: native
     -
+      heading: Crew
+      key: 'heading:67888ed5-1ef2-4b1e-a179-19279b1c9f9d'
+      page: Entries
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:67dec14f-00e1-4609-a350-f1ccf7a42017' # Crew
+      page: Entries
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
       heading: Navigations
       key: 'heading:9d80185a-3b62-45eb-8984-152929f11e94'
       page: Entries
@@ -126,6 +146,13 @@ email:
   fromName: zodiak
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  crewImages:
+    hasUrls: true
+    name: 'Crew Images'
+    settings:
+      path: '@assetsBasePath/crew_images'
+    type: craft\fs\Local
+    url: '@assetsBaseUrl/crew_images'
   legalDocs:
     hasUrls: true
     name: 'Legal Docs'
@@ -177,16 +204,22 @@ meta:
     7a783a29-7156-4483-b41a-4d55d2fbccdb: 'Video ID' # Video ID
     7ad7e7fb-40f1-412a-9ee4-2a1438b7f4b0: Phone # Phone
     7b5e2946-9b1e-4251-bd6d-040141e14d0b: Title # Title
+    7beb6a53-7858-4b80-9539-c5f7b6bdadf8: Values # Values
     7c39293b-eed9-4ccd-9fef-54ef45046927: 'Banner Image' # Banner Image
     7d134702-58b7-44fe-9a2c-8202781ece8c: 'Projects Page' # Projects Page
+    7e2a705f-af26-4908-9bc7-b12c3d3e1bf5: Title # Title
     8a4a8ea9-98bc-4b41-b708-729f70fb6aa1: Email # Email
+    8a419d1c-5d01-4f9b-8f35-8b3175e152eb: Description # Description
+    9e707f25-15bc-40fa-afb9-08811dc6db34: 'Crew Images' # Crew Images
     11eb6c53-5e08-483a-aa33-ef3e5dfc2456: zodiak # zodiak
     22cd74bf-020d-4724-aa7e-fab6166f847b: 'Pages Banners' # Pages Banners
     25bcba6c-988e-47ba-bf0a-3dd58cfd7ec7: 'Project content images' # Project content images
+    36f951f9-2a4b-4123-a814-cdf33136c8b5: Crew # Crew
     41b3d4ab-7806-43c0-a28e-79cfbb407d09: 'Social Media' # Social Media
     44f3d9f2-7415-4c94-95ea-69d157eab7e8: Intro # Intro
     47c911c4-4b30-4db7-9321-56f4d39085f9: homepage # homepage
     50afdb25-510f-491f-abbd-b31010db0395: 'Social Icon' # Social Icon
+    67dec14f-00e1-4609-a350-f1ccf7a42017: Crew # Crew
     84b649ee-bcff-4fbe-a0dc-875dd3e1509d: 'Video Caption' # Video Caption
     99f562bb-763e-4670-b29a-ae7420cf657f: Address # Address
     138f0bd5-183c-480a-acc3-8cc9cb404e25: Text # Text
@@ -205,22 +238,27 @@ meta:
     a96f56b3-4404-44e4-aebb-ce6e7fa3ac47: Title # Title
     a454a20e-2ec1-4b80-86e9-485e852e5722: Link # Link
     a1917f55-1534-44e6-9159-e330ae97592e: Title # Title
+    a602124f-f100-4c9b-8093-5c2d366814e5: Role # Role
     aa27ffac-cd6f-48e6-abcc-c17ad727056d: Homepage # Homepage
     bb20e26f-e0ca-46d3-96d3-db26f1306a8d: Subtitle # Subtitle
     bc566a59-9477-4399-b66c-855e13b8094e: 'About Page' # About Page
     bd941b2b-afd7-417c-a8f0-7c9a2c47bc56: 'Public Schema' # Public Schema
     be6092aa-f7fe-4a07-90c4-d2684bd98478: Title # Title
+    bf9d9db3-2db9-4eb1-af77-db57763b3af2: Value # Value
     c3d44bc9-cd36-4f01-a8b9-780009eeac96: Projects # Projects
     c70bd9ec-4a2e-4602-b512-cf6a522c00d0: Title # Title
     c87d9797-08cc-4928-a9c8-363e490a8db0: Projects # Projects
     d68af3bf-2618-4a77-a0eb-bd002ddc4520: 'Project Body' # Project Body
+    d374b675-ff59-41b0-8e87-5bfb2961b1d8: Name # Name
     d560cc9f-ac1a-4672-b2a5-765cbaf2c097: Contact # Contact
     daf5c4fa-14fd-425a-b0bf-f47763e04d64: 'Social Label' # Social Label
     e9d59d34-8ff9-41f3-9b89-2d6abad1cb90: 'Legal Nav' # Legal Nav
     e9fa6b9b-ed8c-436d-bda0-6ef824f5637a: 'Projects Page' # Projects Page
     eb316b43-61df-485f-a381-a99d83442a89: 'Values title' # Values title
+    ee897ab5-3342-49eb-a807-3848643987a8: Image # Image
     f47afd97-c63c-4b73-98e8-3308118732a8: Video # Video
     f430b339-9348-455d-80ab-66ab0d1a0285: zodiak # zodiak
+    fbabfcef-9abf-454a-ae04-45eeaae7cc65: 'Family Name' # Family Name
 plugins:
   ckeditor:
     edition: standard

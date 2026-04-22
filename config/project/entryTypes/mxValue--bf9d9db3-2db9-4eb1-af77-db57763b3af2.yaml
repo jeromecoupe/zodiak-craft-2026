@@ -1,0 +1,58 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  b635b8c2-638f-492f-840e-a4155877e513:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-22T12:10:38+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7e2a705f-af26-4908-9bc7-b12c3d3e1bf5 # Title
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: abab1d42-f365-4e84-895a-e80056b89693
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-22T12:10:38+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 8a419d1c-5d01-4f9b-8f35-8b3175e152eb # Description
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 068a099c-ff50-4ff3-90de-9fd49623db33
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: eb346b14-8bba-4d8e-91d9-5538743cdee0
+        userCondition: null
+    thumbFieldKey: null
+handle: mxValue
+hasTitleField: false
+icon: null
+name: Value
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{mxValueTitle}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

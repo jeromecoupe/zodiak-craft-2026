@@ -1,0 +1,96 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  3ed475e7-e0f3-45ec-8568-0c295e31a5b2:
+    cardThumbAlignment: end
+    generatedFields:
+      -
+        handle: testCrew
+        name: test
+        template: '{crewName|upper}'
+        uid: 8350dbf8-6b94-4ba8-9a93-b3dcadd29889
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-04-22T12:26:29+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d374b675-ff59-41b0-8e87-5bfb2961b1d8 # Name
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cdddbb2b-c101-46ed-bbf5-b1db550b57f8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-22T12:26:29+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: fbabfcef-9abf-454a-ae04-45eeaae7cc65 # Family Name
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c70a127a-cf3e-4c6a-97fb-28d418a77ce2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-22T12:26:29+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a602124f-f100-4c9b-8093-5c2d366814e5 # Role
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2e09906c-0395-41ae-b7ff-5c65bf60ddd9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-04-22T12:34:25+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: ee897ab5-3342-49eb-a807-3848643987a8 # Image
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2df73abd-aecb-4eeb-bd4e-eb0cf179d767
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3d830d7a-4bb2-4a75-9556-bdcf476e1530
+        userCondition: null
+    thumbFieldKey: null
+handle: crew
+hasTitleField: false
+icon: null
+name: Crew
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{crewFamilyName} {crewName}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'
